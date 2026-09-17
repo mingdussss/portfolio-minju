@@ -482,3 +482,91 @@ if (!prefersReducedMotion && transitionImage && transitionSection) {
 
   updateParallax();
 }
+
+/* WORK ARCHIVE CARD CAROUSEL */
+const archiveCarousel = document.querySelector("[data-archive-carousel]");
+
+if (archiveCarousel) {
+  const archiveStage = archiveCarousel.querySelector(".archive-carousel__stage");
+  const archiveCards = [...archiveCarousel.querySelectorAll("[data-archive-card]")];
+  const archiveNavButtons = [...archiveCarousel.querySelectorAll("[data-archive-nav]")];
+  const archiveStatus = archiveCarousel.querySelector("[data-archive-status]");
+  const slotNames = ["front", "right", "back-right", "back-left", "left"];
+  let activeArchiveIndex = 0;
+  let pointerStartX = null;
+
+  const normalizeArchiveIndex = (index) =>
+    (index + archiveCards.length) % archiveCards.length;
+
+  const updateArchive = (nextIndex, announce = true) => {
+    activeArchiveIndex = normalizeArchiveIndex(nextIndex);
+
+    archiveCards.forEach((card, index) => {
+      const relativeIndex = normalizeArchiveIndex(index - activeArchiveIndex);
+      const isActive = index === activeArchiveIndex;
+
+      card.dataset.slot = slotNames[relativeIndex];
+      card.classList.toggle("is-active", isActive);
+      card.setAttribute("aria-pressed", String(isActive));
+      card.tabIndex = isActive ? 0 : -1;
+    });
+
+    archiveNavButtons.forEach((button, index) => {
+      const isActive = index === activeArchiveIndex;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-selected", String(isActive));
+      button.tabIndex = isActive ? 0 : -1;
+    });
+
+    if (announce && archiveStatus) {
+      archiveStatus.textContent =
+        `${archiveCards[activeArchiveIndex].getAttribute("aria-label")} 선택됨`;
+    }
+  };
+
+  archiveCards.forEach((card, index) => {
+    card.addEventListener("click", () => {
+      if (index !== activeArchiveIndex) {
+        updateArchive(index);
+        return;
+      }
+
+      // 상세 페이지 제작 후 해당 카드의 data-url에 경로만 입력하면 이동합니다.
+      const targetUrl = card.dataset.url?.trim();
+      if (targetUrl) {
+        window.location.href = targetUrl;
+      } else if (archiveStatus) {
+        archiveStatus.textContent = "상세 페이지는 준비 중입니다.";
+      }
+    });
+  });
+
+  archiveNavButtons.forEach((button, index) => {
+    button.addEventListener("click", () => updateArchive(index));
+  });
+
+  archiveStage?.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+    event.preventDefault();
+    updateArchive(activeArchiveIndex + (event.key === "ArrowRight" ? 1 : -1));
+  });
+
+  archiveStage?.addEventListener("pointerdown", (event) => {
+    pointerStartX = event.clientX;
+  });
+
+  archiveStage?.addEventListener("pointerup", (event) => {
+    if (pointerStartX === null) return;
+    const distance = event.clientX - pointerStartX;
+    pointerStartX = null;
+
+    if (Math.abs(distance) < 45) return;
+    updateArchive(activeArchiveIndex + (distance < 0 ? 1 : -1));
+  });
+
+  archiveStage?.addEventListener("pointercancel", () => {
+    pointerStartX = null;
+  });
+
+  updateArchive(0, false);
+}
