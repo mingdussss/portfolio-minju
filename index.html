@@ -1,41 +1,51 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="기본에 충실하고, 의도가 분명한 화면을 설계하는 웹디자이너 박민주의 포트폴리오" />
   <title>Minju Park — Web Designer</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2302080d'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%23f4f5f3' stroke-width='4'/%3E%3Cpath d='M20 32h24M32 12c7 7 7 33 0 40M32 12c-7 7-7 33 0 40' stroke='%23f4f5f3' stroke-width='2' fill='none'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2302080d'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%23f4f5f3' stroke-width='4'/%3E%3Cpath d='M20 32h24M32 12c7 7 7 33 0 40M32 12c-7 7-7 33 0 40' stroke='%23f4f5f3' stroke-width='2' fill='none'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="./css/font.css" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/index.css" />
 </head>
+
 <body>
+
   <main id="main-content">
+    <!-- 히어로배너 -->
     <div class="hero-scroll">
       <section class="hero" aria-labelledby="hero-title">
-      <header class="hero__header">
-        <div class="hero__intro">
-          <p class="hero__eyebrow">WEB DESIGNER</p>
-          <p class="hero__description">기본에 충실하고,<br />의도가 분명한 화면을 설계합니다.</p>
-        </div>
-        <div class="hero__identity">
-          <p>2026 PORTFOLIO</p>
-          <p>MINJU PARK</p>
-        </div>
-      </header>
+        <header class="hero__header">
+          <div class="hero__intro">
+            <p class="hero__eyebrow">WEB DESIGNER</p>
+            <p class="hero__description">기본에 충실하고,<br />의도가 분명한 화면을 설계합니다.</p>
+          </div>
+          <div class="hero__identity">
+            <p>2026 PORTFOLIO</p>
+            <p>MINJU PARK</p>
+          </div>
+        </header>
 
-      <div class="hero__stage" aria-label="Selected portfolio work">
-        <div id="portfolio-globe" class="portfolio-globe" role="img" aria-label="여러 디자인 작업으로 구성된 회전형 포트폴리오 구체. 드래그하여 회전할 수 있습니다."></div>
-      </div>
+        <div class="hero__stage" aria-label="Selected portfolio work">
+          <div id="portfolio-globe" class="portfolio-globe" role="img"
+            aria-label="여러 디자인 작업으로 구성된 회전형 포트폴리오 구체. 드래그하여 회전할 수 있습니다."></div>
+        </div>
 
-      <h1 id="hero-title" class="hero__title">
-        <span>DESIGN</span>
-        <span>WITH INTENT.</span>
-      </h1>
+        <h1 id="hero-title" class="hero__title">
+          <span>DESIGN</span>
+          <span>WITH INTENT.</span>
+        </h1>
       </section>
     </div>
 
+
     <div class="profile-page">
+      <!-- 어바웃미 -->
       <section class="about section-light" aria-labelledby="about-title">
         <aside class="section-rail" aria-hidden="true">
           <span class="section-rail__index">01 / About me</span>
@@ -50,17 +60,21 @@
           </header>
 
           <div class="about__visual reveal">
-            <img class="about__profile-image" src="./images/about-profile.png" alt="박민주 프로필 사진과 트레싱지 정보 카드" width="1087" height="803" />
+            <img class="about__profile-image" src="./images/about-profile.png" alt="박민주 프로필 사진과 트레싱지 정보 카드" width="1087"
+              height="803" />
           </div>
 
           <div class="about__summary reveal">
-            <p>다양한 브랜드의 디자인 실무를 담당하며<br />웹 디자인부터 상세페이지, 프로모션, SNS 콘텐츠, 오프라인 제작물까지 폭넓게 경험했습니다.<br />단순히 보기 좋은 화면을 만드는 데 그치지 않고 정보의 목적과 사용자의 흐름을 정리해<br /><strong>브랜드다운 결과물로 완성하는 과정을 중요하게 생각합니다.</strong></p>
+            <p>다양한 브랜드의 디자인 실무를 담당하며<br />웹 디자인부터 상세페이지, 프로모션, SNS 콘텐츠, 오프라인 제작물까지 폭넓게 경험했습니다.<br />단순히 보기 좋은 화면을 만드는 데
+              그치지 않고 정보의 목적과 사용자의 흐름을 정리해<br /><strong>브랜드다운 결과물로 완성하는 과정을 중요하게 생각합니다.</strong></p>
           </div>
 
-          <p class="about__scope reveal">4+ YEARS OF EXPERIENCE<br />WEB · CONTENT · BRAND<br />VISUAL &amp; UI DESIGN</p>
+          <p class="about__scope reveal">4+ YEARS OF EXPERIENCE<br />WEB · CONTENT · BRAND<br />VISUAL &amp; UI DESIGN
+          </p>
         </div>
       </section>
 
+      <!-- expertise -->
       <section class="expertise section-dark" aria-labelledby="expertise-title">
         <aside class="section-rail" aria-hidden="true">
           <span class="section-rail__index">02 / Expertise</span>
@@ -76,18 +90,24 @@
 
           <ol class="expertise-grid" aria-label="업무 역량">
             <li class="expertise-card reveal">
-              <div class="expertise-card__image expertise-card__collage expertise-card__collage--web" aria-hidden="true">
+              <div class="expertise-card__image expertise-card__collage expertise-card__collage--web"
+                aria-hidden="true">
                 <img src="./images/02-01webdesign.png" alt="웹디자인 이미지" width="360" height="460" />
               </div>
-              <div class="expertise-card__title"><span>01</span><h3>WEB DESIGN</h3></div>
+              <div class="expertise-card__title"><span>01</span>
+                <h3>WEB DESIGN</h3>
+              </div>
               <p>브랜드의 목적과 사용성을 고려해<br />정보 구조와 화면을 설계합니다.</p>
             </li>
 
             <li class="expertise-card reveal">
-              <div class="expertise-card__image expertise-card__collage expertise-card__collage--content" aria-hidden="true">
+              <div class="expertise-card__image expertise-card__collage expertise-card__collage--content"
+                aria-hidden="true">
                 <img src="./images/02-02contentdesign.png" alt="콘텐츠디자인 이미지" width="360" height="460" />
               </div>
-              <div class="expertise-card__title"><span>02</span><h3>CONTENT DESIGN</h3></div>
+              <div class="expertise-card__title"><span>02</span>
+                <h3>CONTENT DESIGN</h3>
+              </div>
               <p>배너, 프로모션, SNS 콘텐츠를<br />채널과 목적에 맞게 디자인합니다.</p>
             </li>
 
@@ -95,7 +115,9 @@
               <div class="expertise-card__image expertise-card__visual" aria-hidden="true">
                 <img src="./images/02-03visualdesign.png" alt="비주얼디자인 이미지" width="363" height="460" />
               </div>
-              <div class="expertise-card__title"><span>03</span><h3>VISUAL CREATION</h3></div>
+              <div class="expertise-card__title"><span>03</span>
+                <h3>VISUAL CREATION</h3>
+              </div>
               <p>제품의 특성을 살려<br />브랜드 비주얼을 제작합니다.</p>
             </li>
 
@@ -103,7 +125,9 @@
               <div class="expertise-card__image device-scene" aria-hidden="true">
                 <img src="./images/02-04publishing.png" alt="퍼블리싱 이미지" width="360" height="460" />
               </div>
-              <div class="expertise-card__title"><span>04</span><h3>PUBLISHING</h3></div>
+              <div class="expertise-card__title"><span>04</span>
+                <h3>PUBLISHING</h3>
+              </div>
               <p>디자인의 의도를 유지하면서<br />반응형 웹 화면으로 구현합니다.</p>
             </li>
           </ol>
@@ -111,7 +135,8 @@
           <section class="tools-workflow reveal" aria-labelledby="tools-title">
             <h3 id="tools-title">TOOLS &amp; WORKFLOW</h3>
             <div class="tools-workflow__images">
-              <img src="./images/tools-design.png" alt="디자인 툴: Photoshop, Illustrator, Figma" width="289" height="111" />
+              <img src="./images/tools-design.png" alt="디자인 툴: Photoshop, Illustrator, Figma" width="289"
+                height="111" />
               <img src="./images/tools-web.png" alt="웹 툴: HTML, CSS, JavaScript" width="289" height="111" />
               <img src="./images/tools-workflow.png" alt="워크플로우 툴: GitHub, ChatGPT, Notion" width="289" height="111" />
             </div>
@@ -119,6 +144,7 @@
         </div>
       </section>
 
+      <!-- work archive -->
       <section class="archive section-light" aria-labelledby="archive-title">
         <aside class="section-rail" aria-hidden="true">
           <span class="section-rail__index">03 / WORK ARCHIVE</span>
@@ -133,9 +159,10 @@
           </header>
 
           <div class="archive-carousel reveal" data-archive-carousel>
-            <div class="archive-carousel__stage" role="region" aria-roledescription="carousel" aria-label="작업 유형 선택" tabindex="0">
-              <!-- data-url에 상세 페이지 경로를 넣으면 활성 카드 클릭 시 이동합니다. -->
-              <button class="archive-card" type="button" data-archive-card data-index="0" data-url="" aria-label="01 팝업 디자인">
+            <div class="archive-carousel__stage" role="region" aria-roledescription="carousel" aria-label="작업 유형 선택"
+              tabindex="0">
+              <button class="archive-card" type="button" data-archive-card data-index="0" data-url=""
+                aria-label="01 팝업 디자인">
                 <img src="./images/archive-01.jpg" alt="나이키 시즌 세일 팝업 디자인" width="600" height="600" />
                 <span class="archive-card__overlay">
                   <span class="archive-card__number">01</span>
@@ -143,7 +170,8 @@
                 </span>
               </button>
 
-              <button class="archive-card" type="button" data-archive-card data-index="1" data-url="" aria-label="02 포스터 디자인">
+              <button class="archive-card" type="button" data-archive-card data-index="1" data-url=""
+                aria-label="02 포스터 디자인">
                 <img src="./images/archive-02.jpg" alt="러닝화 포스터 디자인" width="600" height="600" />
                 <span class="archive-card__overlay">
                   <span class="archive-card__number">02</span>
@@ -151,7 +179,8 @@
                 </span>
               </button>
 
-              <button class="archive-card" type="button" data-archive-card data-index="2" data-url="" aria-label="03 히어로 및 캠페인">
+              <button class="archive-card" type="button" data-archive-card data-index="2" data-url=""
+                aria-label="03 히어로 및 캠페인">
                 <img src="./images/archive-03.jpg" alt="가을 패션 캠페인 디자인" width="600" height="600" />
                 <span class="archive-card__overlay">
                   <span class="archive-card__number">03</span>
@@ -159,7 +188,8 @@
                 </span>
               </button>
 
-              <button class="archive-card" type="button" data-archive-card data-index="3" data-url="" aria-label="04 상세페이지">
+              <button class="archive-card" type="button" data-archive-card data-index="3" data-url=""
+                aria-label="04 상세페이지">
                 <img src="./images/archive-04.jpg" alt="헤드셋 상세페이지 디자인" width="600" height="600" />
                 <span class="archive-card__overlay">
                   <span class="archive-card__number">04</span>
@@ -167,8 +197,9 @@
                 </span>
               </button>
 
-              <button class="archive-card" type="button" data-archive-card data-index="4" data-url="" aria-label="05 브랜드 콘텐츠">
-                <img src="./images/archive-04.jpg" alt="브랜드 프로모션 콘텐츠 디자인" width="600" height="600" />
+              <button class="archive-card" type="button" data-archive-card data-index="4" data-url=""
+                aria-label="05 브랜드 콘텐츠">
+                <img src="./images/archive-05.jpg" alt="브랜드 프로모션 콘텐츠 디자인" width="600" height="600" />
                 <span class="archive-card__overlay">
                   <span class="archive-card__number">05</span>
                   <strong>BRAND<br />CONTENT</strong>
@@ -188,10 +219,252 @@
           </div>
         </div>
       </section>
+
+      <!-- pop-up design -->
+      <section class="popup-showcase section-light" aria-labelledby="popup-title">
+        <aside class="section-rail" aria-hidden="true">
+          <span class="popup-showcase__rail-label">03 / WORK ARCHIVE · 01 POP-UP DESIGN</span>
+        </aside>
+
+        <div class="section-inner popup-showcase__inner">
+          <header class="popup-showcase__heading reveal">
+            <span class="popup-showcase__number">01</span>
+            <h2 id="popup-title">POP-UP DESIGN</h2>
+            <p>짧은 노출 시간에도 프로모션의 핵심이 한눈에 들어오도록<br />이미지와 문구를 명확하게 구성합니다.</p>
+          </header>
+
+          <div class="popup-slider reveal" data-popup-slider>
+            <div class="popup-slider__viewport" tabindex="0" role="region" aria-roledescription="carousel"
+              aria-label="팝업 디자인 작업">
+              <article class="popup-slide is-active" data-popup-slide aria-label="1 / 4 나이키 여름 세일">
+                <div class="popup-slide__image">
+                  <img src="./images/popup-nike.jpg" alt="나이키 여름 시즌 스니커즈 세일 팝업" width="500" height="750" />
+                </div>
+                <div class="popup-slide__content">
+                  <h3><strong class="popup-slide__brand popup-slide__brand--nike">NIKE</strong><br />SUMMER SALE</h3>
+                  <p>강렬한 오렌지 컬러와<br />역동적으로 쌓인 스니커즈 이미지를 활용해<br />여름 시즌 세일의 에너지를 표현했습니다.<br />할인율과 제품, CTA가 빠르게
+                    인식되도록<br />정보의 우선순위를 명확하게 구성했습니다.</p>
+                </div>
+              </article>
+
+              <article class="popup-slide" data-popup-slide aria-label="2 / 4 퓌 올리브영 라이브 프로모션" aria-hidden="true">
+                <div class="popup-slide__image">
+                  <img src="./images/popup-fwee.jpg" alt="퓌 올리브영 라이브 프로모션 팝업" width="500" height="750" />
+                </div>
+                <div class="popup-slide__content">
+                  <h3><span class="popup-slide__fwee-line"><span
+                        class="popup-slide__brand popup-slide__brand--fwee">FWEE</span> X <span
+                        class="popup-slide__brand popup-slide__brand--olive">OLIVE YOUNG</span></span>LIVE PROMOTION
+                  </h3>
+                  <p>제품별 컬러와 제형이 돋보이는 비주얼을 활용해<br />라이브 프로모션의 밝고 경쾌한 분위기를 표현했습니다.<br />방송 일정과 할인 혜택을 화면 중심에 배치해<br />핵심
+                    정보를 빠르게 확인할 수 있도록 구성했습니다.</p>
+                </div>
+              </article>
+
+              <article class="popup-slide" data-popup-slide aria-label="3 / 4 넷플릭스 비포 투모로우" aria-hidden="true">
+                <div class="popup-slide__image">
+                  <img src="./images/popup-netflix.jpg" alt="넷플릭스 영화 비포 투모로우 팝업" width="500" height="750" />
+                </div>
+                <div class="popup-slide__content">
+                  <h3><strong class="popup-slide__brand popup-slide__brand--netflix">NETFLIX</strong><br />BEFORE
+                    TOMORROW</h3>
+                  <p>영화의 따뜻한 감정선을 전달하기 위해<br />노을빛 스틸컷과 찢어진 종이 콜라주를 활용했습니다.<br />작품의 분위기를 충분히 보여주면서<br />제목과 공개일, 예고편
+                    버튼으로 자연스럽게<br />시선이 이어지도록 구성했습니다.</p>
+                </div>
+              </article>
+
+              <article class="popup-slide" data-popup-slide aria-label="4 / 4 투썸플레이스 여름 신메뉴" aria-hidden="true">
+                <div class="popup-slide__image">
+                  <img src="./images/popup-twosome.jpg" alt="투썸플레이스 유자 말차 여름 신메뉴 팝업" width="500" height="750" />
+                </div>
+                <div class="popup-slide__content">
+                  <h3><strong class="popup-slide__brand popup-slide__brand--twosome">TWOSOME</strong><br />SUMMER TASTE
+                  </h3>
+                  <p>유자와 말차의 선명한 색감을 중심으로<br />여름 신메뉴의 산뜻하고 청량한 분위기를 표현했습니다.<br />음료와 케이크를 함께 강조하면서<br />제품 특징과 메뉴 설명이
+                    자연스럽게 읽히도록 구성했습니다.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="popup-slider__controls">
+              <button class="popup-slider__button popup-slider__button--prev" type="button" data-popup-prev
+                aria-label="이전 팝업 디자인">
+                <span aria-hidden="true">←</span>
+              </button>
+              <button class="popup-slider__button popup-slider__button--next" type="button" data-popup-next
+                aria-label="다음 팝업 디자인">
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+            <p class="sr-only" data-popup-status aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- poster design -->
+      <section class="poster-showcase section-light" aria-labelledby="poster-title">
+        <aside class="section-rail" aria-hidden="true">
+          <span class="poster-showcase__rail-label">03 / WORK ARCHIVE · 02 POSTER DESIGN</span>
+        </aside>
+
+        <div class="section-inner poster-showcase__inner">
+          <header class="poster-showcase__heading reveal">
+            <span class="poster-showcase__number">02</span>
+            <h2 id="poster-title">POSTER DESIGN</h2>
+            <p>주제와 분위기가 한눈에 드러나도록 이미지와 타이포그래피를 조합해<br />하나의 선명한 비주얼로 완성합니다.</p>
+          </header>
+
+          <div class="poster-marquee reveal" data-poster-marquee>
+            <div class="poster-marquee__viewport" data-poster-viewport tabindex="0"
+              aria-label="포스터 디자인 17개. 좌우로 드래그하거나 포스터를 선택할 수 있습니다.">
+              <div class="poster-marquee__track" data-poster-track>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="0"
+                  data-title="NEW BALANCE|RELEASE POSTER"
+                  data-description="역동적인 로우 앵글 이미지와 강한 타이포그래피를 조합해 |러닝의 속도감을 표현했습니다.|블루와 레드의 선명한 대비로 |제품과 핵심 메세지에 시선이 집중되도록 구성했습니다."
+                  aria-label="뉴발란스 릴리즈 포스터 자세히 보기">
+                  <img src="./images/poster-01.jpg" alt="뉴발란스 러닝화 릴리즈 포스터" width="500" height="750" />
+                  <span class="poster-card__index">01</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="1"
+                  data-title="ZANOTTA|OBJECT POSTER"
+                  data-description="블루 라운지체어를 패키지 안에 담긴 오브제처럼 연출해 |제품의 독특한 형태를 강조했습니다.|절제된 배경과 실험적인 레이아웃으로 |브랜드의 감각적인 분위기를 표현했습니다."
+                  aria-label="자노타 오브제 포스터 자세히 보기">
+                  <img src="./images/poster-02.jpg" alt="블루 오브제 제품 포스터" width="500" height="750" />
+                  <span class="poster-card__index">02</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="2"
+                  data-title="JBL|PRODUCT POSTER"
+                  data-description="강렬한 오렌지 컬러와 굴곡진 타이포그래피를 활용해| 풍부한 사운드의 에너지를 시각화했습니다. |제품을 화면 중앙에 배치하고 주요 기능이 잘 보이도록 구성했습니다."
+                  aria-label="JBL 제품 캠페인 포스터 자세히 보기">
+                  <img src="./images/poster-03.jpg" alt="JBL 스피커 제품 캠페인 포스터" width="500" height="750" />
+                  <span class="poster-card__index">03</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="3"
+                  data-title="LEICA|PRODUCT POSTER"
+                  data-description="카메라를 사용하는 순간과 제품 이미지를 함께 배치해 |라이프스타일과 기능을 동시에 보여주었습니다. |레드 포인트와 정돈된 정보 구성을 통해 |라이카의 클래식한 이미지를 강조했습니다."
+                  aria-label="라이카 카메라 포스터 자세히 보기">
+                  <img src="./images/poster-04.jpg" alt="라이카 카메라 포스터" width="500" height="750" />
+                  <span class="poster-card__index">04</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="4"
+                  data-title="NONFICTION|PRODUCT POSTER"
+                  data-description="무화과와 세이지, 물방울 이미지를 활용해 |향의 깨끗하고 차분한 인상을 표현했습니다. |밝고 투명한 배경 위에 제품을 중심으로 배치해 |섬세한 향의 분위기가 전해지도록 구성했습니다."
+                  aria-label="논픽션 로션 포스터 자세히 보기">
+                  <img src="./images/poster-05.jpg" alt="논픽션 로션 포스터" width="500" height="750" />
+                  <span class="poster-card__index">05</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="5"
+                  data-title="ATELIER ODD|PRODUCT POSTER"
+                  data-description="종이와 테이프가 겹쳐진 콜라주 형식으로 |향수의 아카이브 이미지를 표현했습니다. |차분한 아이보리 톤과 향조 정보를 함께 구성해 |잔향이 남는 듯한 분위기를 담았습니다."
+                  aria-label="아뜰리에 오드 향수 포스터 자세히 보기">
+                  <img src="./images/poster-06.jpg" alt="아뜰리에 오드 향수 포스터" width="500" height="750" />
+                  <span class="poster-card__index">06</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="6"
+                  data-title="NAGEUNOL|IN-STORE DISPLAY POSTER"
+                  data-description="간결한 문장과 반복되는 가로선을 활용해 |브랜드가 전하는 따뜻한 메시지를 강조했습니다. |여백이 있는 블루 배경과 작은 그래픽 요소로 |편안하고 친근한 분위기를 표현했습니다."
+                  aria-label="나그놀 매장용 포스터 자세히 보기">
+                  <img src="./images/poster-07.jpg" alt="나그놀 매장용 타이포그래피 포스터" width="500" height="750" />
+                  <span class="poster-card__index">07</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="7"
+                  data-title="NAGEUNOL|IN-STORE DISPLAY POSTER"
+                  data-description="부드러운 블루와 크림 컬러의 체크 패턴을 활용해 |밝고 희망적인 새해 분위기를 담았습니다. |아치형 프레임 안에 메시지를 배치해 |자연스럽게 문장에 집중되도록 구성했습니다."
+                  aria-label="나그놀 매장용 포스터 자세히 보기">
+                  <img src="./images/poster-08.jpg" alt="나그놀 매장용 포스터" width="500" height="750" />
+                  <span class="poster-card__index">08</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="8"
+                  data-title="NAGEUNOL|IN-STORE DISPLAY POSTER"
+                  data-description="브랜드 판매 제품을 직접 촬영한 사진을 활용해 만든 포스터로 |브랜드의 고급스러움을 담아냈습니다. |아치형 이미지와 원형 타이포그래피로 |감성적인 브랜드 무드를 완성했습니다."
+                  aria-label="나그놀 매장용 포스터 자세히 보기">
+                  <img src="./images/poster-09.jpg" alt="나그놀 매장용 포스터" width="500" height="750" />
+                  <span class="poster-card__index">09</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="9"
+                  data-title="NICE KITCHEN|IN-STORE DISPLAY POSTER"
+                  data-description="크리스마스트리의 따뜻한 빛을 중심으로 |연말의 포근한 분위기를 담았습니다. |타원형 프레임과 반복되는 문구를 활용해 |시즌 메시지가 자연스럽게 이어지도록 구성했습니다."
+                  aria-label="나이스키친 시즌 포스터 자세히 보기">
+                  <img src="./images/poster-10.jpg" alt="나이스키친 시즌 포스터" width="500" height="750" />
+                  <span class="poster-card__index">10</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="10"
+                  data-title="NICE KITCHEN|IN-STORE DISPLAY POSTER"
+                  data-description="수박과 레몬, 체리 등 여름 과일을 |자유롭게 배치해 계절의 생동감을 표현했습니다. |선명한 레드 타이포그래피와 |유기적인 선을 활용해 경쾌한 리듬감을 더했습니다."
+                  aria-label="나이스 매장용 포스터 자세히 보기">
+                  <img src="./images/poster-11.jpg" alt="나이스 매장용 포스터" width="500" height="750" />
+                  <span class="poster-card__index">11</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="11"
+                  data-title="NICE KITCHEN|ART PRINT POSTER"
+                  data-description="테니스 코트와 체어, 오렌지 오브제를 결합해 |위트 있는 포스터 디자인을 연출했습니다. |과감하게 변형한 타이포그래피와 |그린·오렌지 컬러 대비로 시선을 끌도록 구성했습니다."
+                  aria-label="나이스키친 판매용 포스터 자세히 보기">
+                  <img src="./images/poster-12.jpg" alt="나이스키친 판매용 포스터" width="500" height="750" />
+                  <span class="poster-card__index">12</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="12"
+                  data-title="NICE KITCHEN|IN-STORE DISPLAY POSTER"
+                  data-description="직접 촬영한 판매 제품 이미지를 중심으로 |온라인 스토어 오픈 소식과 브랜드 카테고리를 함께 전달했습니다. |레드 라인과 명확한 정보 구조를 활용해 |프로모션 내용을 빠르게 확인할 수 있도록 구성했습니다."
+                  aria-label="나이스키친 디피용 포스터 자세히 보기">
+                  <img src="./images/poster-13.jpg" alt="나이스키친 디피용 포스터" width="500" height="750" />
+                  <span class="poster-card__index">13</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="13"
+                  data-title="NICE KITCHEN|IN-STORE DISPLAY POSTER"
+                  data-description="직접 촬영한 판매 제품 이미지를 에디토리얼 형식으로 배치해 |쇼룸의 감각적인 분위기를 표현했습니다. |세리프 타이포그래피와 손글씨 요소를 조합해 |세련되면서도 자연스러운 인상을 더했습니다."
+                  aria-label="나이스키친 디피용 포스터 자세히 보기">
+                  <img src="./images/poster-14.jpg" alt="나이스키친 디피용 포스터" width="500" height="750" />
+                  <span class="poster-card__index">14</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="14"
+                  data-title="NICE KITCHEN|ART PRINT POSTER"
+                  data-description="집 안에서 만날 수 있는 다양한 생활 오브제를 |하나의 선으로 연결해 일상의 흐름을 표현했습니다. |따뜻한 버터색| 배경과 콜라주 구성을 활용해 친근하고 위트 있는 분위기를 담았습니다."
+                  aria-label=나이스키친 판매용 포스터 자세히 보기">
+                  <img src="./images/poster-15.jpg" alt="나이스키친 판매용 포스터" width="500" height="750" />
+                  <span class="poster-card__index">15</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="15"
+                  data-title="NICE KITCHEN|IN-STORE DISPLAY POSTER" data-description="커다란 타이포그래피와 생생한 딸기 이미지를 결합해 |기분 좋은 하루를 바라는 메시지를 표현했습니다. |넓은 여백과 과감한 이미지 배치로 |단순하면서도 인상적인 화면을 완성했습니다.
+                  " aria-label="나이스 디피용 포스터 자세히 보기">
+                  <img src="./images/poster-16.jpg" alt="나이스 디피용 포스터" width="500" height="750" />
+                  <span class="poster-card__index">16</span>
+                </button>
+                <button class="poster-card" type="button" data-poster-card data-poster-index="16"
+                  data-title="NICE KITCHEN|IN-STORE DISPLAY POSTER" data-description="짙은 네이비 배경 위에 크리스마스트리와 대형 타이포그래피를 겹쳐 |시즌의 풍성한 분위기를 표현했습니다. |레드와 화이트 포인트 컬러를 활용해 |브랜드의 경쾌한 연말 이미지를 담았습니다."
+                  aria-label="나이스 디피용 포스터 자세히 보기">
+                  <img src="./images/poster-17.jpg" alt="나이스 디피용 포스터" width="500" height="750" />
+                  <span class="poster-card__index">17</span>
+                </button>
+              </div>
+            </div>
+            <p class="poster-marquee__hint">DRAG TO EXPLORE · CLICK TO VIEW</p>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 
+  <dialog class="poster-modal" data-poster-modal aria-labelledby="poster-modal-title">
+    <div class="poster-modal__dialog">
+      <button class="poster-modal__close" type="button" data-poster-close aria-label="포스터 상세 닫기">×</button>
+      <div class="poster-modal__image-wrap">
+        <img data-poster-modal-image src="./images/poster-01.jpg" alt="" width="500" height="750" />
+      </div>
+      <div class="poster-modal__content">
+        <h3 id="poster-modal-title"><span data-poster-modal-title-top>NEWBALANCE</span><span
+            data-poster-modal-title-bottom>RELEASE POSTER</span></h3>
+        <p data-poster-modal-description>뉴발란스 스니커즈 포스터 제작</p>
+        <div class="poster-modal__navigation" aria-label="포스터 상세 이동">
+          <button type="button" data-poster-modal-prev aria-label="이전 포스터">←</button>
+          <span><strong data-poster-modal-current>01</strong> / 17</span>
+          <button type="button" data-poster-modal-next aria-label="다음 포스터">→</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
   <script src="./js/three.min.js"></script>
-  <script src="./js/script.js"></script>
+  <script src="./js/index.js"></script>
 </body>
+
 </html>
