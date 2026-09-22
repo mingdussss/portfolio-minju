@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BREVILLE 커피머신 상세페이지 디자인 프로젝트" />
+    <title>BREVILLE Coffee Maker — Product Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/font.css?v=20260922-01" />
+    <link rel="stylesheet" href="./css/reset.css?v=20260922-01" />
+    <link rel="stylesheet" href="./css/common.css?v=20260922-01" />
+    <link rel="stylesheet" href="./css/product.css?v=20260922-02" />
+</head>
+
+<body class="product-page">
+    <!-- 스크롤 중에도 고정되는 상세페이지 닫기 버튼 -->
+    <a class="product-close" href="./index.html#detail-showcase" data-product-close aria-label="이전 페이지로 돌아가기">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 5 19 19M19 5 5 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+    </a>
+
+    <main>
+        <!-- project overview -->
+        <section class="product-overview" aria-labelledby="product-title">
+            <a class="product-overview__back" href="./index.html#detail-showcase" aria-label="워크 아카이브 상세페이지 섹션으로 돌아가기">
+                <span aria-hidden="true">←</span> BACK TO ARCHIVE
+            </a>
+
+            <header class="product-overview__header">
+                <!-- 다른 프로젝트 제작 시 아래 브랜드명과 소개 문구만 수정하세요. -->
+                <h1 id="product-title">BREVILLE</h1>
+                <p class="product-overview__summary">
+                    <span>원두의 분쇄부터 추출까지,</span>
+                    <strong>완성도 높은 한 잔의 과정을 담은 커피머신 상세페이지</strong>
+                </p>
+            </header>
+
+            <section class="design-points" aria-labelledby="design-points-title">
+                <h2 id="design-points-title">Design Point</h2>
+                <ol class="design-points__list">
+                    <li>
+                        <span class="design-points__number">01</span>
+                        <div>
+                            <h3>프로젝트 개요 및 기획 의도</h3>
+                            <p>에스프레소 한 잔이 완성되는 과정을 중심으로 제품의 주요 기능을 자연스럽게 전달하고자 했습니다
+                                그라인딩부터 도징, 추출 온도까지 사용 흐름에 따라 정보를 구성해 전문적인 성능을 쉽게 이해할 수 있도록 기획했습니다</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="design-points__number">02</span>
+                        <div>
+                            <h3>기능 중심의 정보 구조</h3>
+                            <p>25단계 분쇄 조절과 정밀 도징, PID 온도 제어 등 핵심 기능을 단계별로 구분했습니다
+                                기능 이미지와 간결한 설명을 함께 배치해 복잡한 기술 정보를 직관적으로 확인할 수 있도록 구성했습니다</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="design-points__number">03</span>
+                        <div>
+                            <h3>따뜻한 프리미엄 톤앤매너</h3>
+                            <p>아이보리와 에스프레소 브라운을 중심으로 차분하고 따뜻한 분위기를 연출했습니다
+                                스테인리스 소재와 커피의 질감이 돋보이는 이미지, 여유 있는 여백을 활용해 제품의 전문성과 감성적인 무드를 함께 표현했습니다</p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+        </section>
+
+        <!-- product detail images -->
+        <section class="product-detail" aria-label="BREVILLE 커피머신 상세페이지 이미지">
+            <div class="product-detail__sticky" aria-hidden="true">
+                <p>PRODUCT DETAIL</p>
+            </div>
+
+            <div class="product-detail__images">
+                <figure class="product-detail__image-block">
+                    <img src="./images/kiehl-01.png" alt="bloom into calm" width="860" height="1000" />
+                </figure>
+                <figure class="product-detail__image-block">
+                    <img src="./images/kiehl-02.png" alt="피부에 내려앉는 금빛 진정" width="860" height="1000" />
+                </figure>
+                <figure class="product-detail__image-block">
+                    <img src="./images/kiehl-03.png" alt="민감해진 피부를 편안하게" width="860" height="1000" />
+                </figure>
+                <figure class="product-detail__image-block">
+                    <img src="./images/kiehl-04.png" alt="피부를 편안하게 다독이는 4가지 진정 포뮬라" width="860" height="1000" />
+                </figure>
+                <figure class="product-detail__image-block">
+                    <img src="./images/kiehl-05.png" alt="알코올 없이도 산뜻하고 촉촉하게" width="860" height="1000" />
+                </figure>
+                <figure class="product-detail__image-block">
+                    <img src="./images/kiehl-06.png" alt="칼렌듈라로 완성하는 3step 진정 루틴" width="860" height="1000" />
+                </figure>
+            </div>
+        </section>
+    </main>
+    <script src="./js/product.js?v=20260922-01"></script>
+</body>
+
+</html>

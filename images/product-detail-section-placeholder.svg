@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="1000" viewBox="0 0 860 1000" role="img" aria-labelledby="title desc">
+  <title id="title">상세페이지 섹션 이미지 자리</title>
+  <desc id="desc">실제 상세페이지 섹션 이미지로 교체하기 위한 플레이스홀더</desc>
+  <rect width="860" height="1000" fill="#eef2f4"/>
+  <rect x="32" y="32" width="796" height="936" fill="none" stroke="#cbd4d9" stroke-width="2" stroke-dasharray="12 12"/>
+  <circle cx="430" cy="440" r="54" fill="none" stroke="#9eabb3" stroke-width="3"/>
+  <path d="M393 470l30-31 25 24 20-18 35 35H393z" fill="#9eabb3"/>
+  <text x="430" y="540" text-anchor="middle" fill="#60717b" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2">DETAIL SECTION IMAGE</text>
+  <text x="430" y="580" text-anchor="middle" fill="#82919a" font-family="Arial, sans-serif" font-size="17">860px width · replace this image path</text>
+</svg>

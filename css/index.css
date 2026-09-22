@@ -200,15 +200,14 @@
   display: flex;
   align-items: baseline;
   justify-content: center;
-  gap: .06em;
+  gap: .12em;
   width: 100%;
   padding: 0 12px;
   color: #f7f7f4;
   font-family: "Instrument Serif", "Times New Roman", serif;
-  font-size: min(14.4vw, 14.4rem);
+  font-size: min(16vw, 16rem);
   font-weight: 300;
   line-height: .78;
-  letter-spacing: -.045em;
   text-align: center;
   white-space: nowrap;
   transform: scaleX(.88);
@@ -1920,17 +1919,6 @@ body.is-modal-open {
 }
 
 
-@media (min-width: 641px) and (max-width: 1100px) {
-  .hero__title {
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    font-size: 13.5vw;
-    line-height: .82;
-  }
-}
-
-
 @media (max-width: 640px) {
   .hero-scroll {
     height: 410svh;
@@ -1970,7 +1958,7 @@ body.is-modal-open {
     align-items: center;
     gap: 0;
     padding: 0;
-    font-size: 15.3vw;
+    font-size: 17vw;
     line-height: .86;
     letter-spacing: -.065em;
     transform: none;
@@ -2249,11 +2237,23 @@ body.is-modal-open {
 }
 
 .detail-card__image {
+  position: relative;
   width: 100%;
   aspect-ratio: 380 / 534;
   margin: 0 0 clamp(20px, 1.5vw, 28px);
   overflow: hidden;
   background: #eef1f2;
+}
+
+.detail-card__image::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  content: "";
+  background: rgba(6, 23, 34, .56);
+  opacity: 0;
+  transition: opacity .35s ease;
+  pointer-events: none;
 }
 
 .detail-card__image img {
@@ -2262,6 +2262,27 @@ body.is-modal-open {
   object-fit: cover;
   object-position: center;
   transition: transform .7s var(--ease-out), filter .35s ease;
+}
+
+.detail-card__cta {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-size: clamp(18px, 1.45vw, 28px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: .12em;
+  opacity: 0;
+  transform: translate(-50%, calc(-50% + 12px));
+  transition: opacity .35s ease, transform .35s var(--ease-out);
+  pointer-events: none;
+}
+
+.detail-card:focus-visible {
+  outline: 2px solid #1f5d87;
+  outline-offset: 6px;
 }
 
 .detail-card__image--contain img {
@@ -2291,7 +2312,43 @@ body.is-modal-open {
 @media (hover: hover) and (pointer: fine) {
   .detail-card:hover .detail-card__image img {
     transform: scale(1.035);
-    filter: brightness(.94);
+  }
+
+  .detail-card:hover .detail-card__image::after,
+  .detail-card:focus-visible .detail-card__image::after,
+  .detail-card:hover .detail-card__cta,
+  .detail-card:focus-visible .detail-card__cta {
+    opacity: 1;
+  }
+
+  .detail-card:hover .detail-card__cta,
+  .detail-card:focus-visible .detail-card__cta {
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* 호버가 없는 PAD·MO에서는 작은 클릭 표시를 항상 보여줍니다. */
+@media (hover: none), (pointer: coarse) {
+  .detail-card__image::after {
+    top: auto;
+    height: 30%;
+    background: linear-gradient(to top, rgba(6, 23, 34, .42), transparent);
+    opacity: 1;
+  }
+
+  .detail-card__cta {
+    top: auto;
+    right: clamp(12px, 2vw, 18px);
+    bottom: clamp(12px, 2vw, 18px);
+    left: auto;
+    padding: 9px 13px 8px;
+    border: 1px solid rgba(255, 255, 255, .7);
+    border-radius: 999px;
+    font-size: clamp(12px, 1.6vw, 15px);
+    letter-spacing: .09em;
+    background: rgba(6, 23, 34, .76);
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -3012,6 +3069,8 @@ body.is-modal-open {
   .hero-banner-slide,
   .hero-banner-slider__button,
   .detail-card__image img,
+  .detail-card__image::after,
+  .detail-card__cta,
   .brand-media img,
   .brand-overview img,
   .brand-modal {

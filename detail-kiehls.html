@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KIEHL'S 토너 상세페이지 디자인 프로젝트" />
+    <title>KIEHL'S Toner — Product Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/font.css?v=20260922-01" />
+    <link rel="stylesheet" href="./css/reset.css?v=20260922-01" />
+    <link rel="stylesheet" href="./css/common.css?v=20260922-01" />
+    <link rel="stylesheet" href="./css/product.css?v=20260922-02" />
+</head>
+
+<body class="product-page">
+    <!-- 스크롤 중에도 고정되는 상세페이지 닫기 버튼 -->
+    <a class="product-close" href="./index.html#detail-showcase" data-product-close aria-label="이전 페이지로 돌아가기">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 5 19 19M19 5 5 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+    </a>
+
+    <main>
+        <!-- project overview -->
+        <section class="product-overview" aria-labelledby="product-title">
+            <a class="product-overview__back" href="./index.html#detail-showcase" aria-label="워크 아카이브 상세페이지 섹션으로 돌아가기">
+                <span aria-hidden="true">←</span> BACK TO ARCHIVE
+            </a>
+
+            <header class="product-overview__header">
+                <!-- 다른 프로젝트 제작 시 아래 브랜드명과 소개 문구만 수정하세요. -->
+                <h1 id="product-title">KIEHL'S</h1>
+                <p class="product-overview__summary">
+                    <span>칼렌듈라 성분의 진정 효과를</span>
+                    <strong>따뜻한 감성으로 풀어낸 토너 상세페이지</strong>
+                </p>
+            </header>
+
+            <section class="design-points" aria-labelledby="design-points-title">
+                <h2 id="design-points-title">Design Point</h2>
+                <ol class="design-points__list">
+                    <li>
+                        <span class="design-points__number">01</span>
+                        <div>
+                            <h3>프로젝트 개요 및 기획 의도</h3>
+                            <p>칼렌듈라 성분이 전하는 진정 효과를 보다 부드럽고 감성적으로 전달하기 위해 기존 제품 이미지를 새롭게 해석했습니다
+                                민감해진 피부를 편안하게 돌보는 제품의 특징을 중심으로 전체 콘텐츠를 구성했습니다</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="design-points__number">02</span>
+                        <div>
+                            <h3>성분과 효능의 직관적인 전달</h3>
+                            <p>칼렌듈라를 비롯한 주요 진정 성분을 각각의 이미지와 함께 배치해 제품의 효능을 쉽게 이해할 수 있도록 했습니다
+                                피부 고민부터 성분, 사용 효과, 루틴 제안까지 자연스럽게 이어지는 정보 흐름을 설계했습니다</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="design-points__number">03</span>
+                        <div>
+                            <h3>자연스럽고 따뜻한 비주얼</h3>
+                            <p>웜 아이보리와 칼렌듈라 오렌지를 중심으로 깨끗하면서도 생기 있는 분위기를 연출했습니다
+                                꽃과 투명한 제형 이미지를 활용해 원료의 자연스러움을 강조하고, 여유 있는 레이아웃으로 편안한 브랜드 무드를 표현했습니다</p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+        </section>
+
+        <!-- product detail images -->
+        <section class="product-detail" aria-label="KIEHL'S 토너 상세페이지 이미지">
+            <div class="product-detail__sticky" aria-hidden="true">
+                <p>PRODUCT DETAIL</p>
+            </div>
+
+            <div class="product-detail__images">
+                <figure class="product-detail__image-block">
+                    <img src="./images/kiehl-01.png" alt="bloom into calm" width="860" height="1000" />
+                </figure>
+                <figure class="product-detail__image-block">
+                    <img src="./images/kiehl-02.png" alt="피부에 내려앉는 금빛 진정" width="860" height="1000" />
+                </figure>
+                <figure class="product-detail__image-block">
+                    <img src="./images/kiehl-03.png" alt="민감해진 피부를 편안하게" width="860"
+                        height="1000" />
+                </figure>
+                <figure class="product-detail__image-block">
+                    <img src="./images/kiehl-04.png" alt="피부를 편안하게 다독이는 4가지 진정 포뮬라" width="860" height="1000" />
+                </figure>
+                <figure class="product-detail__image-block">
+                    <img src="./images/kiehl-05.png" alt="알코올 없이도 산뜻하고 촉촉하게" width="860" height="1000" />
+                </figure>
+                <figure class="product-detail__image-block">
+                    <img src="./images/kiehl-06.png" alt="칼렌듈라로 완성하는 3step 진정 루틴" width="860" height="1000" />
+                </figure>
+            </div>
+        </section>
+    </main>
+    <script src="./js/product.js?v=20260922-01"></script>
+</body>
+
+</html>
