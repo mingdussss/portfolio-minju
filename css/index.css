@@ -2005,6 +2005,1892 @@ body.is-modal-open {
   }
 }
 
+/* KIEHL'S PROJECT INFO — final centering override */
+@media (min-width: 769px) {
+  .case-study--kiehls .case-section--overview .case-meta.case-meta--six {
+    right: auto !important;
+    left: 50% !important;
+    width: min(63.2292vw, 1214px) !important;
+    margin: 0 !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    place-items: center !important;
+    text-align: center !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .case-study--kiehls .case-section--overview .case-meta.case-meta--six > div {
+    width: 100% !important;
+    min-width: 0;
+    align-items: center !important;
+    justify-content: flex-start;
+    text-align: center !important;
+  }
+
+  .case-study--kiehls .case-section--overview .case-meta.case-meta--six dt,
+  .case-study--kiehls .case-section--overview .case-meta.case-meta--six dd {
+    width: 100% !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+}
+
+/* PROJECT CASE STUDY : KIEHL'S / FORME */
+.project-case {
+  overflow: clip;
+}
+
+.project-case__inner {
+  width: min(100%, 1720px);
+  margin-inline: auto;
+  padding: clamp(110px, 8.3vw, 160px) clamp(42px, 5vw, 96px);
+}
+
+.project-intro {
+  text-align: center;
+}
+
+.project-intro__eyebrow,
+.project-heading > p,
+.project-summary__index,
+.forme-page__copy > span {
+  color: var(--blue);
+  font-size: clamp(15px, 1.05vw, 20px);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: .06em;
+}
+
+.project-intro h2 {
+  margin-top: clamp(20px, 2vw, 38px);
+  font-size: clamp(76px, 8.34vw, 160px);
+  font-weight: 600;
+  line-height: .82;
+  letter-spacing: -.075em;
+}
+
+.project-intro h2 em {
+  color: var(--blue);
+  font-family: "Instrument Serif", Georgia, serif;
+  font-weight: 400;
+}
+
+.project-intro__lead {
+  margin-top: clamp(34px, 3.2vw, 62px);
+  font-size: clamp(20px, 1.57vw, 30px);
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: -.035em;
+}
+
+.project-cover {
+  margin-top: clamp(70px, 7.3vw, 140px);
+  background: #eef3f5;
+}
+
+.project-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(350px, .85fr);
+  gap: clamp(70px, 8vw, 154px);
+  align-items: end;
+  margin-top: clamp(80px, 8.3vw, 160px);
+}
+
+.project-summary__copy h3 {
+  margin-top: 16px;
+  font-size: clamp(58px, 5.73vw, 110px);
+  font-weight: 600;
+  line-height: .92;
+  letter-spacing: -.065em;
+}
+
+.project-summary__copy > p:last-child {
+  max-width: 770px;
+  margin-top: clamp(28px, 2.5vw, 48px);
+  font-size: clamp(18px, 1.25vw, 24px);
+  line-height: 1.75;
+  letter-spacing: -.03em;
+}
+
+.project-meta {
+  border-top: 1px solid currentColor;
+}
+
+.project-meta > div {
+  display: grid;
+  grid-template-columns: minmax(110px, .38fr) 1fr;
+  gap: 20px;
+  padding: 17px 0;
+  border-bottom: 1px solid rgba(5, 5, 5, .2);
+  font-size: clamp(15px, 1vw, 19px);
+  line-height: 1.45;
+}
+
+.project-meta dt {
+  font-weight: 700;
+}
+
+.project-meta dd {
+  color: #4f5559;
+}
+
+.project-direction,
+.project-feature,
+.forme-overview {
+  margin-top: clamp(140px, 12.5vw, 240px);
+}
+
+.project-heading h3 {
+  margin-top: 18px;
+  font-size: clamp(46px, 4.69vw, 90px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.06em;
+}
+
+.project-heading > span {
+  display: block;
+  max-width: 720px;
+  margin-top: 26px;
+  font-size: clamp(18px, 1.25vw, 24px);
+  line-height: 1.7;
+  letter-spacing: -.03em;
+}
+
+.project-heading--center {
+  text-align: center;
+}
+
+.project-heading--center > span {
+  margin-inline: auto;
+}
+
+.project-direction__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: clamp(54px, 5vw, 96px);
+}
+
+.project-direction__grid article {
+  min-height: clamp(250px, 20vw, 384px);
+  padding: clamp(28px, 2.6vw, 50px);
+  border: 1px solid #c8d2d8;
+  background: #f3f7f9;
+}
+
+.project-direction__grid span {
+  color: var(--blue);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.project-direction__grid h4 {
+  margin-top: clamp(52px, 5vw, 96px);
+  font-size: clamp(28px, 2.08vw, 40px);
+  font-weight: 600;
+  letter-spacing: -.045em;
+}
+
+.project-direction__grid p {
+  margin-top: 18px;
+  font-size: clamp(17px, 1.15vw, 22px);
+  line-height: 1.65;
+  letter-spacing: -.03em;
+}
+
+.project-feature__media,
+.project-feature__main-media,
+.project-feature__wide-media {
+  margin-top: clamp(54px, 5vw, 96px);
+}
+
+.project-feature__media video,
+.project-feature__main-media img,
+.project-feature__wide-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-feature__media--video {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #101719;
+}
+
+.project-feature__media--video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-feature--product-list {
+  display: grid;
+  grid-template-columns: minmax(260px, .38fr) minmax(0, 1fr);
+  gap: clamp(42px, 5vw, 96px);
+  align-items: center;
+}
+
+.project-feature--product-list .project-feature__main-media {
+  margin-top: 0;
+}
+
+.kiehls-purchase-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(210px, .55fr);
+  gap: 18px;
+  align-items: stretch;
+  margin-top: clamp(54px, 5vw, 96px);
+}
+
+.kiehls-purchase-grid figure {
+  overflow: hidden;
+  background: #eaf1f4;
+}
+
+.kiehls-purchase-grid img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.kiehls-purchase-grid__mockup {
+  grid-row: span 2;
+}
+
+.kiehls-purchase-grid__mobile {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 18px;
+}
+
+/* FORME */
+.project-case--forme {
+  --blue: #6b4f3d;
+  background: #f3f0eb;
+}
+
+.project-case--forme .project-direction__grid article {
+  border-color: #d1c7be;
+  background: #e9e3dc;
+}
+
+.forme-overview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 1.7vw, 32px);
+  margin-top: clamp(54px, 5vw, 96px);
+}
+
+.forme-overview__grid article {
+  min-width: 0;
+}
+
+.forme-overview__grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #ddd6ce;
+}
+
+.forme-overview__grid p {
+  display: flex;
+  gap: 18px;
+  margin-top: 20px;
+  font-size: clamp(18px, 1.35vw, 26px);
+  font-weight: 600;
+  letter-spacing: -.035em;
+}
+
+.forme-overview__grid p span {
+  color: var(--blue);
+}
+
+.forme-pages {
+  padding: clamp(120px, 10vw, 192px) clamp(42px, 5vw, 96px);
+  color: #f6f2ed;
+  background: #16201f;
+}
+
+.forme-page {
+  display: grid;
+  grid-template-columns: minmax(280px, .65fr) minmax(0, 1.35fr);
+  gap: clamp(56px, 7vw, 134px);
+  align-items: center;
+  width: min(100%, 1528px);
+  margin-inline: auto;
+}
+
+.forme-page + .forme-page {
+  margin-top: clamp(130px, 12vw, 230px);
+}
+
+.forme-page--reverse .forme-page__copy {
+  order: 2;
+}
+
+.forme-page__copy > span {
+  color: #bdaf9f;
+}
+
+.forme-page__copy h3 {
+  margin-top: 18px;
+  font-size: clamp(44px, 4.17vw, 80px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -.06em;
+}
+
+.forme-page__copy p {
+  margin-top: 30px;
+  font-size: clamp(18px, 1.2vw, 23px);
+  line-height: 1.75;
+  letter-spacing: -.03em;
+}
+
+.forme-page figure {
+  min-width: 0;
+}
+
+.forme-page img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .project-case__inner {
+    padding: 100px 44px 120px;
+  }
+
+  .project-intro h2 {
+    font-size: clamp(66px, 10vw, 102px);
+  }
+
+  .project-summary {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .project-meta {
+    width: min(100%, 680px);
+  }
+
+  .project-direction,
+  .project-feature,
+  .forme-overview {
+    margin-top: 150px;
+  }
+
+  .project-direction__grid article {
+    min-height: 270px;
+    padding: 30px;
+  }
+
+  .project-direction__grid h4 {
+    margin-top: 54px;
+  }
+
+  .project-feature--product-list {
+    grid-template-columns: 1fr;
+  }
+
+  .project-feature--product-list .project-feature__main-media {
+    margin-top: 16px;
+  }
+
+  .forme-overview__grid {
+    grid-template-columns: 1fr;
+    width: min(100%, 720px);
+    margin-inline: auto;
+    margin-top: 68px;
+  }
+
+  .forme-overview__grid article + article {
+    margin-top: 34px;
+  }
+
+  .forme-pages {
+    padding: 120px 44px;
+  }
+
+  .forme-page {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .forme-page--reverse .forme-page__copy {
+    order: initial;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-case__inner {
+    padding: 76px 20px 90px;
+  }
+
+  .project-intro__eyebrow,
+  .project-heading > p,
+  .project-summary__index,
+  .forme-page__copy > span {
+    font-size: 12px;
+  }
+
+  .project-intro h2 {
+    margin-top: 16px;
+    font-size: clamp(48px, 16vw, 74px);
+    line-height: .88;
+  }
+
+  .project-intro__lead {
+    margin-top: 26px;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .project-intro .pc-only {
+    display: none;
+  }
+
+  .project-cover {
+    width: calc(100% + 40px);
+    margin: 52px 0 0 -20px;
+  }
+
+  .project-summary {
+    gap: 42px;
+    margin-top: 72px;
+  }
+
+  .project-summary__copy h3 {
+    font-size: clamp(46px, 14vw, 64px);
+  }
+
+  .project-summary__copy > p:last-child,
+  .project-heading > span,
+  .project-direction__grid p,
+  .forme-page__copy p {
+    font-size: 16px;
+  }
+
+  .project-meta > div {
+    grid-template-columns: 92px 1fr;
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .project-direction,
+  .project-feature,
+  .forme-overview {
+    margin-top: 108px;
+  }
+
+  .project-heading h3 {
+    margin-top: 12px;
+    font-size: clamp(38px, 11vw, 52px);
+  }
+
+  .project-heading > span {
+    margin-top: 18px;
+  }
+
+  .project-direction__grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 44px;
+  }
+
+  .project-direction__grid article {
+    min-height: 0;
+    padding: 26px;
+  }
+
+  .project-direction__grid h4 {
+    margin-top: 42px;
+    font-size: 26px;
+  }
+
+  .project-feature__media,
+  .project-feature__main-media,
+  .project-feature__wide-media,
+  .kiehls-purchase-grid,
+  .forme-overview__grid {
+    margin-top: 42px;
+  }
+
+  .project-feature__media--video {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+  }
+
+  .kiehls-purchase-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .kiehls-purchase-grid__mockup {
+    grid-row: auto;
+  }
+
+  .kiehls-purchase-grid__mobile {
+    padding: 10px;
+  }
+
+  .forme-overview__grid p {
+    margin-top: 14px;
+    font-size: 17px;
+  }
+
+  .forme-pages {
+    padding: 90px 20px;
+  }
+
+  .forme-page {
+    gap: 32px;
+  }
+
+  .forme-page + .forme-page {
+    margin-top: 110px;
+  }
+
+  .forme-page__copy h3 {
+    font-size: clamp(38px, 12vw, 52px);
+  }
+}
+
+/* FIGMA PROJECTS — node 1:2 */
+.selected-project-intro {
+  position: relative;
+  min-height: 600px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Work Archive의 레일이 프로젝트 진입부에서 자연스럽게 사라집니다. */
+.selected-project-intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 38%;
+  left: var(--section-rail-width);
+  width: 1px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(5, 5, 5, .72), rgba(5, 5, 5, 0));
+}
+
+.selected-project-intro__inner {
+  padding: 80px 24px;
+}
+
+.selected-project-intro__inner > p {
+  font-size: clamp(18px, 1.56vw, 30px);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.selected-project-intro__inner h2 {
+  font-family: "Instrument Serif", "Times New Roman", serif;
+  margin-top: 10px;
+  font-size: clamp(54px, 5.2vw, 100px);
+  font-weight: 600;
+  line-height: .94;
+  letter-spacing: -.06em;
+}
+
+.selected-project-intro__inner span {
+  display: block;
+  margin-top: 46px;
+  font-size: clamp(18px, 1.56vw, 30px);
+  line-height: 1.4;
+}
+
+.case-study {
+  position: relative;
+  width: 100%;
+  overflow: clip;
+}
+
+.case-cover {
+  position: relative;
+  width: 100%;
+  min-height: 720px;
+  aspect-ratio: 1920 / 1057;
+  overflow: hidden;
+  color: #fff;
+}
+
+.case-cover video,
+.case-cover > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-cover__shade {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .2);
+}
+
+.case-cover__content {
+  position: absolute;
+  z-index: 1;
+  left: clamp(42px, 5.7vw, 110px);
+  bottom: clamp(70px, 8vw, 154px);
+  max-width: 760px;
+}
+
+.case-cover__content > p,
+.case-cover__role {
+  font-size: clamp(14px, 1.25vw, 24px);
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+.case-cover__content h2 {
+  margin-top: 18px;
+  font-size: clamp(58px, 6.25vw, 120px);
+  font-weight: 600;
+  line-height: .92;
+  letter-spacing: -.06em;
+}
+
+.case-cover__content span {
+  display: block;
+  margin-top: 28px;
+  font-size: clamp(17px, 1.45vw, 28px);
+  line-height: 1.55;
+}
+
+.case-cover__role {
+  position: absolute;
+  z-index: 1;
+  top: 54px;
+  right: clamp(42px, 5.7vw, 110px);
+}
+
+.case-cover--forme .case-cover__content h2 {
+  font-family: "Pretendard", sans-serif;
+  line-height: .98;
+}
+
+.case-section {
+  padding: clamp(120px, 9.4vw, 180px) clamp(44px, 5.2vw, 100px);
+  background: #fff;
+}
+
+.case-section--tint,
+.case-section--responsive {
+  background: #e8eef2;
+}
+
+.case-heading {
+  width: min(100%, 1720px);
+  margin-inline: auto;
+  text-align: center;
+  word-break: keep-all;
+}
+
+.case-heading h3 {
+  font-size: clamp(34px, 2.61vw, 50px);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.case-heading p {
+  margin-top: 32px;
+  font-size: clamp(19px, 1.56vw, 30px);
+  line-height: 1.4;
+}
+
+.case-overview-image {
+  width: min(100%, 1450px);
+  margin: 80px auto 0;
+}
+
+.case-overview-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.kiehls-team {
+  width: min(100%, 1450px);
+  margin: 42px auto 0;
+  text-align: center;
+}
+
+.kiehls-team > p {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.kiehls-team > p span {
+  padding: 12px 30px;
+  border-radius: 999px;
+  color: #fff;
+  background: #587789;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.kiehls-contribution {
+  margin-top: 70px;
+}
+
+.kiehls-contribution h4,
+.visual-identity-grid h4,
+.forme-identity h4 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.kiehls-contribution > p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.kiehls-contribution dl {
+  width: min(100%, 940px);
+  margin: 32px auto 0;
+}
+
+.kiehls-contribution dl > div {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 28px;
+  align-items: center;
+  margin-top: 18px;
+  text-align: left;
+}
+
+.kiehls-contribution dd {
+  position: relative;
+  height: 18px;
+  background: #d8e0e4;
+}
+
+.kiehls-contribution dd span {
+  display: block;
+  width: var(--rate);
+  height: 100%;
+  background: #587789;
+}
+
+.kiehls-contribution dd b {
+  position: absolute;
+  top: 50%;
+  left: calc(var(--rate) + 12px);
+  transform: translateY(-50%);
+}
+
+.case-meta {
+  display: grid;
+  width: min(100%, 1214px);
+  margin: 72px auto 0;
+  text-align: center;
+}
+
+.case-meta--six {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 64px;
+}
+
+.case-meta--four {
+  grid-template-columns: repeat(4, 260px);
+  justify-content: center;
+  gap: 48px;
+}
+
+.case-meta--four > div {
+  min-height: 197px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.8);
+}
+
+.case-meta dt {
+  font-size: clamp(19px, 1.46vw, 28px);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.case-meta dd {
+  margin-top: 16px;
+  font-size: clamp(17px, 1.25vw, 24px);
+  line-height: 1.4;
+}
+
+.kiehls-heritage,
+.kiehls-values,
+.problem-grid,
+.persona-card,
+.direction-pill-grid,
+.visual-identity-grid,
+.forme-concept__keywords,
+.forme-identity,
+.forme-flow__grid {
+  width: min(100%, 1534px);
+  margin-inline: auto;
+}
+
+.kiehls-heritage {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.kiehls-wordmark {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: clamp(90px, 10vw, 190px);
+  font-style: italic;
+  text-align: center;
+}
+
+.kiehls-wordmark small {
+  display: block;
+  margin-top: -20px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  letter-spacing: .45em;
+}
+
+.kiehls-history-visual {
+  display: grid;
+  place-items: center;
+  min-height: 430px;
+  color: #fff;
+  background: linear-gradient(135deg, #191919, #626262);
+  filter: grayscale(1);
+  text-align: center;
+}
+
+.kiehls-history-visual span {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 58px;
+  line-height: .95;
+}
+
+.kiehls-values {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 68px;
+  margin-top: 72px;
+  text-align: center;
+}
+
+.kiehls-values b {
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 999px;
+  color: #fff;
+  background: #668291;
+}
+
+.kiehls-values p {
+  margin-top: 16px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.kiehls-analysis__closing {
+  margin-top: 68px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 64px 48px;
+  margin-top: 80px;
+}
+
+.problem-grid__visual {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 743 / 738;
+  color: #fff;
+  background: linear-gradient(145deg, #173b45, #dfe7e9);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.problem-grid article:nth-child(2) .problem-grid__visual { background: linear-gradient(145deg, #080808, #f5f5f5); }
+.problem-grid article:nth-child(3) .problem-grid__visual { background: linear-gradient(145deg, #e7d5b1, #fff); color: #222; }
+.problem-grid article:nth-child(4) .problem-grid__visual { background: linear-gradient(145deg, #bbb, #333); }
+
+.problem-grid h4 {
+  margin-top: 48px;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.problem-grid p {
+  margin-top: 16px;
+  font-size: 22px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.persona-card {
+  display: grid;
+  grid-template-columns: 310px 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 70px;
+  padding: 50px;
+  background: #eff3f4;
+}
+
+.persona-card__portrait {
+  grid-row: span 2;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(145deg, #e8e1db, #9aa8ad);
+}
+
+.persona-card h4 { font-size: 28px; font-weight: 600; }
+.persona-card p, .persona-card li { margin-top: 14px; font-size: 20px; line-height: 1.55; }
+.persona-card blockquote { font-family: "Instrument Serif", Georgia, serif; font-size: 30px; line-height: 1.4; }
+.persona-card ul { padding: 26px 30px; background: #fff; }
+
+.direction-pill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 76px;
+}
+
+.direction-pill-grid article {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 26px 40px;
+  border-radius: 999px;
+  color: #fff;
+  background: #668291;
+  font-size: 22px;
+}
+
+.visual-heading {
+  margin-top: 110px;
+}
+
+.visual-identity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 64px;
+}
+
+.visual-identity-grid article {
+  min-height: 280px;
+  padding: 36px;
+  background: #fff;
+}
+
+.identity-logo {
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 40px auto 0;
+  border: 2px solid #b49a67;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 70px;
+}
+
+.identity-mood { height: 150px; margin-top: 30px; background: linear-gradient(135deg, #e9e1cf, #89a9af, #f8f7f3); }
+.identity-type { display: flex; justify-content: space-around; align-items: center; margin-top: 56px; font-size: 34px; }
+.identity-type em { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; }
+.identity-colors { display: grid; grid-template-columns: repeat(4,1fr); height: 70px; margin-top: 54px; }
+.identity-colors i:nth-child(1){background:#f2eee5}.identity-colors i:nth-child(2){background:#d7d9d7}.identity-colors i:nth-child(3){background:#8fa4ad}.identity-colors i:nth-child(4){background:#b9782f}
+
+.responsive-scale {
+  display: flex;
+  justify-content: space-between;
+  width: min(100%, 1100px);
+  margin: 72px auto 0;
+  border-top: 3px solid #7593a2;
+}
+
+.responsive-scale span { position: relative; padding-top: 18px; font-weight: 600; }
+.responsive-scale span::before { content:""; position:absolute; top:-9px; left:50%; width:15px; height:15px; border-radius:50%; background:#7593a2; transform:translateX(-50%); }
+.responsive-scale small { display:block; margin-top:5px; text-align:center; }
+
+.screen-feature {
+  width: min(100%, 1694px);
+  margin: 150px auto 0;
+}
+
+.screen-feature > header {
+  text-align: center;
+}
+
+.screen-feature > header h4 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.screen-feature > header p {
+  margin-top: 16px;
+  font-size: 24px;
+}
+
+.screen-feature > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 52px;
+}
+
+.screen-feature__notes {
+  display: flex;
+  gap: 80px;
+  margin-top: 46px;
+}
+
+.screen-feature__notes > div {
+  flex: 1;
+}
+
+.screen-feature__notes b,
+.product-detail-composition b {
+  font-size: 24px;
+}
+
+.screen-feature__notes p,
+.product-detail-composition p {
+  margin-top: 14px;
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.product-detail-composition {
+  display: grid;
+  grid-template-columns: .65fr .7fr 1.35fr;
+  gap: 46px;
+  align-items: start;
+  margin-top: 100px;
+}
+
+.product-detail-composition > img { width: 100%; }
+.product-detail-composition__tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.product-detail-composition__tiles img { width: 100%; height: 360px; object-fit: cover; object-position: top; }
+
+.case-section--forme-overview { background: #e8e8e8; }
+.forme-concept { background: #e6eaed; }
+
+.forme-concept__keywords {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 70px;
+}
+
+.forme-concept__keywords span {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  color: #fff;
+  background: #30364f;
+}
+
+.forme-concept__keywords b { font-size: 40px; }
+.forme-concept__keywords small { margin-top: 16px; font-size: 22px; }
+
+.forme-identity {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px;
+  margin-top: 100px;
+}
+
+.forme-identity article { min-height: 300px; padding: 34px; background: rgba(255,255,255,.66); }
+.forme-identity b { display:block; margin-top:30px; font-size:24px; }
+.forme-identity p { margin-top: 14px; font-size: 18px; line-height: 1.55; }
+.forme-colors { display:grid; grid-template-columns:repeat(2,1fr); height:84px; margin-top:34px; }
+.forme-colors i:nth-child(1){background:#f1f0e8}.forme-colors i:nth-child(2){background:#acbac4}.forme-colors i:nth-child(3){background:#e1d9bc}.forme-colors i:nth-child(4){background:#30364f}
+
+.forme-flow__grid {
+  display: grid;
+  grid-template-columns: 400px 40px 400px 40px 400px;
+  gap: 64px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.forme-flow__grid > span { display:grid; place-items:center; width:40px; height:40px; border-radius:50%; color:#fff; background:#30364f; font-size:32px; }
+.forme-flow__grid article { overflow:hidden; border-radius:20px; text-align:center; background:#e1e5e8; }
+.forme-flow__grid article > div { height:540px; overflow:hidden; }
+.forme-flow__grid img { width:100%; height:100%; object-fit:cover; object-position:top; }
+.forme-flow__grid b { display:block; margin-top:36px; font-size:24px; }
+.forme-flow__grid h4 { margin-top:16px; font-size:24px; font-weight:500; }
+.forme-flow__grid p { min-height:120px; padding:8px 36px 34px; font-size:22px; line-height:1.4; }
+
+.forme-page-sections {
+  color: #fff;
+  background: linear-gradient(#252b3b, #aab9c4);
+}
+
+.forme-page-block {
+  padding: 150px 0 0;
+  text-align: center;
+}
+
+.forme-page-block header { padding: 0 24px; }
+.forme-page-block h3 { font-size:50px; font-weight:600; }
+.forme-page-block b { display:block; margin-top:32px; font-size:30px; }
+.forme-page-block p { margin-top:18px; font-size:24px; line-height:1.5; }
+.forme-page-block img { display:block; width:min(100%,1720px); height:auto; margin:70px auto 0; }
+.forme-page-block:last-child { padding-bottom:150px; }
+
+@media (max-width: 1024px) {
+  .selected-project-intro { min-height: 440px; }
+  .case-cover { min-height: 600px; }
+  .case-meta--four { grid-template-columns: repeat(2,260px); }
+  .kiehls-values { grid-template-columns: repeat(2,1fr); }
+  .persona-card { grid-template-columns: 220px 1fr; }
+  .persona-card blockquote, .persona-card ul { grid-column: 1 / -1; }
+  .product-detail-composition { grid-template-columns: 1fr 1fr; }
+  .product-detail-composition__tiles { grid-column: 1 / -1; }
+  .forme-flow__grid { grid-template-columns: repeat(3, minmax(0,1fr)); gap:24px; }
+  .forme-flow__grid > span { display:none; }
+  .forme-flow__grid article > div { height:380px; }
+}
+
+@media (max-width: 768px) {
+  .selected-project-intro { min-height: 360px; }
+  .selected-project-intro::before { left: var(--section-rail-width); bottom:55%; }
+  .selected-project-intro__inner h2 { font-size:42px; }
+  .selected-project-intro__inner span { margin-top:28px; font-size:16px; }
+  .case-cover { min-height: 560px; aspect-ratio:auto; }
+  .case-cover__content { left:24px; right:24px; bottom:54px; }
+  .case-cover__content h2 { font-size:48px; }
+  .case-cover__content span { font-size:16px; }
+  .case-cover__role { top:24px; right:24px; font-size:12px; }
+  .case-section { padding:80px 20px; }
+  .case-heading h3 { font-size:30px; }
+  .case-heading p { margin-top:20px; font-size:16px; }
+  .case-heading p br { display:none; }
+  .kiehls-team > p { flex-direction:column; align-items:center; }
+  .kiehls-contribution dl > div { grid-template-columns:1fr; gap:8px; }
+  .case-meta--six, .case-meta--four { grid-template-columns:1fr 1fr; gap:28px 12px; }
+  .case-meta--four > div { width:auto; min-height:160px; }
+  .kiehls-heritage, .problem-grid, .persona-card, .visual-identity-grid, .forme-identity { grid-template-columns:1fr; }
+  .kiehls-history-visual { min-height:260px; }
+  .kiehls-values { gap:36px 12px; }
+  .problem-grid h4 { margin-top:24px; font-size:20px; }
+  .problem-grid p { font-size:16px; }
+  .persona-card { padding:24px; }
+  .persona-card__portrait { width:100%; max-width:280px; margin:auto; grid-row:auto; }
+  .direction-pill-grid { grid-template-columns:1fr; }
+  .direction-pill-grid article { padding:20px 24px; font-size:16px; }
+  .identity-type { font-size:24px; }
+  .responsive-scale { font-size:11px; }
+  .screen-feature { margin-top:100px; }
+  .screen-feature__notes { flex-direction:column; gap:30px; }
+  .product-detail-composition { grid-template-columns:1fr; }
+  .product-detail-composition__tiles { grid-column:auto; }
+  .product-detail-composition__tiles img { height:220px; }
+  .forme-concept__keywords { gap:8px; }
+  .forme-concept__keywords span { width:31vw; height:31vw; }
+  .forme-concept__keywords b { font-size:18px; }
+  .forme-concept__keywords small { font-size:12px; }
+  .forme-flow__grid { grid-template-columns:1fr; }
+  .forme-flow__grid article > div { height:360px; }
+  .forme-page-block { padding-top:100px; }
+  .forme-page-block h3 { font-size:34px; }
+  .forme-page-block b { font-size:22px; }
+  .forme-page-block p { font-size:16px; }
+}
+
+/* KIEHL'S — Figma node 233:459
+   범위: 프로젝트 커버부터 PERSONA 직전까지 */
+@media (min-width: 1025px) {
+  .case-cover--kiehls {
+    min-height: 0;
+    aspect-ratio: 1920 / 1057;
+  }
+
+  .case-cover--kiehls video {
+    top: -7.85%;
+    left: -10.06%;
+    width: 117.62%;
+    height: 120.25%;
+    max-width: none;
+    object-fit: cover;
+  }
+
+  .case-cover--kiehls .case-cover__content {
+    top: 31.5%;
+    right: auto;
+    bottom: auto;
+    left: 5.21%;
+    width: 43%;
+    max-width: none;
+  }
+
+  .case-cover--kiehls .case-cover__content > p {
+    font-size: 24px;
+  }
+
+  .case-cover--kiehls .case-cover__content h2 {
+    margin-top: 16px;
+    font-size: 80px;
+    line-height: 1.02;
+    letter-spacing: -.055em;
+  }
+
+  .case-cover--kiehls .case-cover__content span {
+    margin-top: 24px;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .case-cover--kiehls .case-cover__role {
+    top: 5.2%;
+    right: 5.21%;
+    font-size: 20px;
+  }
+
+  /* PROJECT OVERVIEW: 목업의 회색 배경이 섹션 그라데이션과 끊기지 않게 연결 */
+  .case-study--kiehls .case-section--overview {
+    position: relative;
+    height: clamp(1148px, 112.03125vw, 2151px);
+    padding: 0;
+    background: #fff;
+  }
+
+  .case-study--kiehls .case-section--overview::after {
+    position: absolute;
+    z-index: 3;
+    top: 75.22%;
+    left: 50%;
+    width: min(75.52vw, 1450px);
+    height: 1px;
+    background: rgba(5, 5, 5, .24);
+    content: "";
+    transform: translateX(-50%);
+  }
+
+  .case-study--kiehls .case-section--overview > .case-heading {
+    position: absolute;
+    z-index: 4;
+    top: min(9.3229vw, 179px);
+    left: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  .case-study--kiehls .case-section--overview > .case-heading h3 {
+    font-size: clamp(32px, 2.6042vw, 50px);
+    line-height: 1.4;
+  }
+
+  .case-study--kiehls .case-section--overview > .case-heading p {
+    margin-top: clamp(20px, 1.6667vw, 32px);
+    font-size: clamp(19px, 1.5625vw, 30px);
+    line-height: 1.4;
+  }
+
+  .case-study--kiehls .case-overview-image {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+  }
+
+  .case-study--kiehls .case-overview-image img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+
+  .case-study--kiehls .kiehls-team {
+    display: contents;
+  }
+
+  .case-study--kiehls .kiehls-team > p {
+    position: absolute;
+    z-index: 4;
+    top: min(23.6979vw, 455px);
+    left: 50%;
+    display: grid;
+    grid-template-columns: min(20.1042vw, 386px) min(21.7708vw, 418px);
+    gap: min(.8333vw, 16px);
+    margin: 0;
+    transform: translateX(-50%);
+  }
+
+  .case-study--kiehls .kiehls-team > p span {
+    display: grid;
+    place-items: center;
+    min-height: clamp(34px, 2.8125vw, 54px);
+    padding: clamp(6px, .5208vw, 10px) clamp(14px, 1.5625vw, 30px);
+    font-size: clamp(14px, 1.25vw, 24px);
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .case-study--kiehls .kiehls-contribution {
+    position: absolute;
+    z-index: 4;
+    top: min(67.1354vw, 1289px);
+    left: 0;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .case-study--kiehls .kiehls-contribution h4 {
+    font-size: clamp(24px, 1.875vw, 36px);
+    line-height: 1.4;
+  }
+
+  .case-study--kiehls .kiehls-contribution > p {
+    margin-top: 8px;
+    font-size: clamp(15px, 1.25vw, 24px);
+    line-height: 1.5;
+  }
+
+  .case-study--kiehls .kiehls-contribution dl {
+    width: min(48.6458vw, 934px);
+    margin-top: min(1.3542vw, 26px);
+  }
+
+  .case-study--kiehls .kiehls-contribution dl > div {
+    grid-template-columns: min(15.4167vw, 296px) min(29.0625vw, 558px);
+    gap: min(4.1667vw, 80px);
+    margin-top: min(.8333vw, 16px);
+  }
+
+  .case-study--kiehls .kiehls-contribution dt {
+    font-size: clamp(18px, 1.5625vw, 30px);
+    line-height: 1.4;
+  }
+
+  .case-study--kiehls .kiehls-contribution dd {
+    height: 14px;
+  }
+
+  .case-study--kiehls .kiehls-contribution dd b {
+    right: calc(100% + clamp(12px, 1.1458vw, 22px));
+    left: auto;
+    width: clamp(38px, 2.6042vw, 50px);
+    font-size: clamp(15px, 1.25vw, 24px);
+    text-align: right;
+  }
+
+  .case-study--kiehls .case-meta--six {
+    position: absolute;
+    z-index: 4;
+    top: min(88.125vw, 1692px);
+    right: 0;
+    left: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(min(8.1771vw, 157px), auto);
+    place-items: start center;
+    column-gap: min(3.3333vw, 64px);
+    row-gap: min(3.3333vw, 64px);
+    width: min(63.2292vw, 1214px);
+    margin: 0 auto;
+    text-align: center;
+    transform: none;
+  }
+
+  .case-study--kiehls .case-meta--six > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .case-study--kiehls .case-meta--six dt {
+    width: 100%;
+    font-size: clamp(18px, 1.4583vw, 28px);
+  }
+
+  .case-study--kiehls .case-meta--six dd {
+    width: 100%;
+    margin-top: min(.8333vw, 16px);
+    font-size: clamp(15px, 1.25vw, 24px);
+  }
+
+  /* BRAND ANALYSIS */
+  .case-study--kiehls .kiehls-analysis {
+    padding: 124px 100px 0;
+    background: #fff;
+  }
+
+  .case-study--kiehls .kiehls-analysis .case-heading h3 {
+    font-size: 50px;
+  }
+
+  .case-study--kiehls .kiehls-analysis .case-heading p {
+    margin-top: 32px;
+    font-size: 30px;
+  }
+
+  .case-study--kiehls .kiehls-heritage {
+    grid-template-columns: 548px 671px;
+    gap: 129px;
+    align-items: center;
+    width: 1348px;
+    margin-top: 48px;
+  }
+
+  .case-study--kiehls .kiehls-wordmark {
+    width: 548px;
+    font-size: 160px;
+    line-height: .78;
+  }
+
+  .case-study--kiehls .kiehls-wordmark small {
+    margin-top: 28px;
+    font-size: 28px;
+    letter-spacing: .42em;
+  }
+
+  .case-study--kiehls .kiehls-history-visual {
+    display: block;
+    width: 671px;
+    height: 438px;
+    min-height: 0;
+    margin: 0;
+    background: none;
+    filter: none;
+  }
+
+  .case-study--kiehls .kiehls-history-visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .case-study--kiehls .kiehls-values {
+    grid-template-columns: repeat(4, 216px);
+    gap: 68px;
+    justify-content: center;
+    width: 1068px;
+    margin-top: 73px;
+  }
+
+  .case-study--kiehls .kiehls-values article {
+    width: 216px;
+  }
+
+  .case-study--kiehls .kiehls-values b {
+    min-width: 183px;
+    padding: 10px 17px;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .case-study--kiehls .kiehls-values p {
+    margin-top: 16px;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .case-study--kiehls .kiehls-analysis__closing {
+    margin-top: 79px;
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  /* PROBLEM DEFINITION */
+  .case-study--kiehls .kiehls-analysis + .case-section--tint {
+    padding: 231px 100px 143px;
+    background: #e5ecef;
+  }
+
+  .case-study--kiehls .kiehls-analysis + .case-section--tint .case-heading h3 {
+    font-size: 50px;
+  }
+
+  .case-study--kiehls .kiehls-analysis + .case-section--tint .case-heading p {
+    margin-top: 32px;
+    font-size: 30px;
+  }
+
+  .case-study--kiehls .problem-grid {
+    grid-template-columns: repeat(2, 743px);
+    column-gap: 48px;
+    row-gap: 48px;
+    justify-content: center;
+    width: 1534px;
+    margin-top: 79px;
+  }
+
+  .case-study--kiehls .problem-grid article {
+    width: 743px;
+  }
+
+  .case-study--kiehls .problem-grid__visual {
+    display: block;
+    width: 743px;
+    height: 738px;
+    aspect-ratio: auto;
+    object-fit: cover;
+    background: none;
+  }
+
+  .case-study--kiehls .problem-grid h4 {
+    margin-top: 48px;
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .case-study--kiehls .problem-grid p {
+    min-height: 62px;
+    margin-top: 16px;
+    font-size: 22px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 1024px) {
+  .case-cover--kiehls {
+    aspect-ratio: 1920 / 1057;
+    min-height: 0;
+  }
+
+  .case-study--kiehls .case-section--overview {
+    padding: 90px 0 100px;
+    background: linear-gradient(180deg, #e8e8e8 0%, #ededed 65%, #fff 100%);
+  }
+
+  .case-study--kiehls .case-section--overview > .case-heading {
+    position: relative;
+    z-index: 2;
+    padding-inline: 44px;
+  }
+
+  .case-study--kiehls .case-overview-image {
+    width: 100%;
+    margin-top: -40px;
+  }
+
+  .case-study--kiehls .kiehls-team {
+    width: calc(100% - 88px);
+    margin-top: -10vw;
+  }
+
+  .case-study--kiehls .kiehls-team > p {
+    position: relative;
+    z-index: 2;
+  }
+
+  .case-study--kiehls .kiehls-contribution {
+    margin-top: 70px;
+  }
+
+  .case-study--kiehls .case-meta--six {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .case-study--kiehls .kiehls-heritage {
+    grid-template-columns: .9fr 1.1fr;
+    width: 100%;
+    gap: 7vw;
+  }
+
+  .case-study--kiehls .kiehls-history-visual {
+    min-height: 0;
+    background: none;
+    filter: none;
+  }
+
+  .case-study--kiehls .kiehls-history-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .case-study--kiehls .kiehls-values {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+  }
+
+  .case-study--kiehls .problem-grid {
+    width: 100%;
+  }
+
+  .case-study--kiehls .problem-grid__visual {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 743 / 738;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-cover--kiehls {
+    min-height: 520px;
+    aspect-ratio: auto;
+  }
+
+  .case-cover--kiehls .case-cover__content {
+    top: auto;
+    bottom: 48px;
+  }
+
+  .case-cover--kiehls .case-cover__content h2 {
+    font-size: 42px;
+  }
+
+  .case-study--kiehls .case-section--overview {
+    padding-top: 72px;
+  }
+
+  .case-study--kiehls .case-section--overview > .case-heading {
+    padding-inline: 20px;
+  }
+
+  .case-study--kiehls .case-overview-image {
+    margin-top: 10px;
+  }
+
+  .case-study--kiehls .kiehls-team {
+    width: calc(100% - 40px);
+    margin-top: -4vw;
+  }
+
+  .case-study--kiehls .kiehls-team > p {
+    gap: 8px;
+  }
+
+  .case-study--kiehls .kiehls-team > p span {
+    padding: 9px 14px;
+    font-size: 12px;
+  }
+
+  .case-study--kiehls .case-meta--six {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 12px;
+  }
+
+  .case-study--kiehls .kiehls-heritage {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study--kiehls .kiehls-wordmark {
+    font-size: 100px;
+  }
+
+  .case-study--kiehls .kiehls-values {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 12px;
+  }
+
+  .case-study--kiehls .kiehls-values b {
+    min-width: 0;
+    font-size: 14px;
+  }
+
+  .case-study--kiehls .kiehls-values p {
+    font-size: 15px;
+  }
+
+  .case-study--kiehls .problem-grid {
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+
+  .case-study--kiehls .problem-grid article {
+    width: 100%;
+  }
+}
+
+/* KIEHL'S OVERVIEW — PAD: PC 원본 배치 비율을 그대로 축소 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .case-study--kiehls .case-section--overview {
+    position: relative;
+    height: 112.035vw;
+    padding: 0;
+    background: #fff;
+  }
+
+  .case-study--kiehls .case-section--overview::after {
+    position: absolute;
+    z-index: 3;
+    top: 75.22%;
+    left: 50%;
+    width: 75.52vw;
+    height: 1px;
+    background: rgba(5, 5, 5, .24);
+    content: "";
+    transform: translateX(-50%);
+  }
+
+  .case-study--kiehls .case-section--overview > .case-heading {
+    position: absolute;
+    z-index: 4;
+    top: 9.3229vw;
+    left: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  .case-study--kiehls .case-section--overview > .case-heading h3 {
+    font-size: clamp(26px, 3.125vw, 32px);
+  }
+
+  .case-study--kiehls .case-section--overview > .case-heading p {
+    margin-top: clamp(14px, 1.9531vw, 20px);
+    font-size: clamp(15px, 1.8555vw, 19px);
+  }
+
+  .case-study--kiehls .case-overview-image {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .case-study--kiehls .case-overview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .case-study--kiehls .kiehls-team {
+    display: contents;
+  }
+
+  .case-study--kiehls .kiehls-team > p {
+    position: absolute;
+    z-index: 4;
+    top: 23.6979vw;
+    left: 50%;
+    display: grid;
+    grid-template-columns: 20.1042vw 21.7708vw;
+    gap: .8333vw;
+    width: auto;
+    margin: 0;
+    transform: translateX(-50%);
+  }
+
+  .case-study--kiehls .kiehls-team > p span {
+    display: grid;
+    place-items: center;
+    min-height: 2.8125vw;
+    padding: .5208vw 1.2vw;
+    font-size: clamp(11px, 1.25vw, 13px);
+    white-space: nowrap;
+  }
+
+  .case-study--kiehls .kiehls-contribution {
+    position: absolute;
+    z-index: 4;
+    top: 67.1354vw;
+    left: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .case-study--kiehls .kiehls-contribution h4 {
+    font-size: clamp(20px, 2.3438vw, 24px);
+  }
+
+  .case-study--kiehls .kiehls-contribution > p {
+    margin-top: 8px;
+    font-size: clamp(13px, 1.4648vw, 15px);
+  }
+
+  .case-study--kiehls .kiehls-contribution dl {
+    width: 48.6458vw;
+    margin-top: 1.3542vw;
+  }
+
+  .case-study--kiehls .kiehls-contribution dl > div {
+    grid-template-columns: 15.4167vw 29.0625vw;
+    gap: 4.1667vw;
+    margin-top: .8333vw;
+  }
+
+  .case-study--kiehls .kiehls-contribution dt {
+    font-size: clamp(15px, 1.7578vw, 18px);
+  }
+
+  .case-study--kiehls .kiehls-contribution dd {
+    height: 8px;
+  }
+
+  .case-study--kiehls .kiehls-contribution dd b {
+    right: calc(100% + 1.1458vw);
+    left: auto;
+    width: 4vw;
+    font-size: clamp(13px, 1.4648vw, 15px);
+    text-align: right;
+  }
+
+  .case-study--kiehls .case-meta--six {
+    position: absolute;
+    z-index: 4;
+    top: 88.125vw;
+    right: 0;
+    left: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(8.1771vw, auto);
+    place-items: start center;
+    column-gap: 3.3333vw;
+    row-gap: 3.3333vw;
+    width: 63.2292vw;
+    margin: 0 auto;
+    text-align: center;
+    transform: none;
+  }
+
+  .case-study--kiehls .case-meta--six > div {
+    width: 100%;
+    text-align: center;
+  }
+
+  .case-study--kiehls .case-meta--six dt {
+    font-size: clamp(15px, 1.7578vw, 18px);
+  }
+
+  .case-study--kiehls .case-meta--six dd {
+    margin-top: .8333vw;
+    font-size: clamp(13px, 1.4648vw, 15px);
+  }
+}
+
 /* WORK ARCHIVE — SHARED SUBSECTION HEADING */
 .archive-subsection-heading {
   display: flex;
@@ -3076,5 +4962,34 @@ body.is-modal-open {
   .brand-modal {
     transition: none;
     animation: none;
+  }
+}
+
+/* KIEHL'S PROJECT INFO — actual final centering override */
+@media (min-width: 769px) {
+  .case-study--kiehls .case-section--overview .case-meta.case-meta--six {
+    right: auto !important;
+    left: 50% !important;
+    width: min(63.2292vw, 1214px) !important;
+    margin: 0 !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    place-items: center !important;
+    text-align: center !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .case-study--kiehls .case-section--overview .case-meta.case-meta--six > div {
+    width: 100% !important;
+    min-width: 0;
+    align-items: center !important;
+    justify-content: flex-start;
+    text-align: center !important;
+  }
+
+  .case-study--kiehls .case-section--overview .case-meta.case-meta--six dt,
+  .case-study--kiehls .case-section--overview .case-meta.case-meta--six dd {
+    width: 100% !important;
+    margin-inline: auto !important;
+    text-align: center !important;
   }
 }

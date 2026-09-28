@@ -43,7 +43,8 @@ body {
 .poster-showcase,
 .hero-banner-showcase,
 .detail-showcase,
-.brand-showcase {
+.brand-showcase,
+.project-case {
   position: relative;
   padding-left: var(--section-rail-width);
 }
