@@ -1,0 +1,431 @@
+/* Final responsive corrections — 2026-09-29 */
+
+/* Project covers: keep the title readable without a separate black panel. */
+.case-cover__content,
+.case-cover--kiehls .case-cover__content,
+.case-cover--forme .case-cover__content {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* KIEHL'S project overview: normal document flow prevents all overlaps. */
+.case-study--kiehls .case-section--overview {
+  position: relative !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: clamp(112px, 7.29vw, 140px) clamp(44px, 5.21vw, 100px) clamp(130px, 9.38vw, 180px) !important;
+  overflow: hidden;
+  background: linear-gradient(180deg, #e7e7e7 0%, #ffffff 100%) !important;
+}
+
+.case-study--kiehls .case-section--overview::after {
+  display: none !important;
+  content: none !important;
+}
+
+.case-study--kiehls .case-section--overview > .case-heading {
+  position: static !important;
+  inset: auto !important;
+  width: min(100%, 1720px) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+.case-study--kiehls .case-section--overview > .case-heading h3 {
+  margin-top: 0 !important;
+}
+
+.case-study--kiehls .kiehls-team {
+  position: static !important;
+  display: block !important;
+  width: min(100%, 1450px) !important;
+  margin: clamp(42px, 2.6vw, 50px) auto 0 !important;
+  transform: none !important;
+}
+
+.case-study--kiehls .kiehls-team > p {
+  position: static !important;
+  inset: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: clamp(8px, .83vw, 16px) !important;
+  width: 100% !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+
+.case-study--kiehls .kiehls-team > p span {
+  display: grid !important;
+  place-items: center !important;
+  min-height: clamp(36px, 2.81vw, 54px) !important;
+  padding: clamp(7px, .52vw, 10px) clamp(14px, 1.56vw, 30px) !important;
+  font-size: clamp(14px, 1.25vw, 24px) !important;
+  line-height: 1.2 !important;
+}
+
+.case-study--kiehls .kiehls-overview-mockup {
+  position: static !important;
+  inset: auto !important;
+  display: block !important;
+  width: min(100%, 1450px) !important;
+  height: auto !important;
+  margin: clamp(42px, 3.13vw, 60px) auto 0 !important;
+  transform: none !important;
+}
+
+.case-study--kiehls .kiehls-overview-mockup img {
+  position: static !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  margin: 0 !important;
+  object-fit: contain !important;
+  transform: none !important;
+}
+
+.case-study--kiehls .kiehls-contribution {
+  position: static !important;
+  inset: auto !important;
+  width: min(100%, 1120px) !important;
+  margin: clamp(66px, 4.69vw, 90px) auto 0 !important;
+  transform: none !important;
+}
+
+.case-study--kiehls .kiehls-contribution dl {
+  width: min(100%, 940px) !important;
+  margin: clamp(26px, 1.67vw, 32px) auto 0 !important;
+}
+
+.case-study--kiehls .kiehls-contribution dl > div {
+  grid-template-columns: minmax(150px, 260px) minmax(0, 1fr) !important;
+  gap: clamp(24px, 3.13vw, 60px) !important;
+}
+
+.case-study--kiehls .case-section--overview .case-meta.case-meta--six {
+  position: static !important;
+  inset: auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-auto-rows: auto !important;
+  place-items: start center !important;
+  gap: clamp(42px, 3.33vw, 64px) !important;
+  width: min(100%, 1214px) !important;
+  margin: clamp(80px, 5.73vw, 110px) auto 0 !important;
+  padding-top: clamp(70px, 5.21vw, 100px) !important;
+  border-top: 1px solid rgba(5, 5, 5, .24);
+  text-align: center !important;
+  transform: none !important;
+}
+
+/* Responsive experience: color-only gradient, followed by full-width page blocks. */
+.responsive-experience {
+  position: relative;
+  padding: 0 !important;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f5f5f5 0%, #c9d0d5 100%) !important;
+}
+
+.responsive-experience::before {
+  display: none !important;
+  content: none !important;
+}
+
+.responsive-experience > .case-heading {
+  padding: clamp(112px, 7.29vw, 140px) clamp(44px, 5.21vw, 100px) 0;
+}
+
+.responsive-experience > .case-heading h3 {
+  margin-top: 0;
+}
+
+.responsive-experience > .responsive-breakpoints,
+.responsive-experience > .responsive-page--main {
+  width: min(calc(100% - clamp(88px, 10.42vw, 200px)), 1694px);
+}
+
+.responsive-page--main {
+  padding-bottom: clamp(150px, 10.42vw, 200px);
+}
+
+.responsive-main-hero,
+.responsive-main-promotion {
+  min-width: 0;
+}
+
+.responsive-main-hero {
+  grid-template-columns: minmax(0, 65.4fr) minmax(0, 34.6fr);
+}
+
+.responsive-main-promotion {
+  grid-template-columns: minmax(0, 40.5fr) minmax(0, 59.5fr);
+}
+
+.responsive-main-hero__web,
+.responsive-main-hero__mobile,
+.responsive-main-promotion__web,
+.responsive-main-promotion__mobile {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.responsive-main-hero__mobile {
+  width: clamp(180px, 29.17vw, 560px);
+}
+
+.responsive-main-promotion__mobile {
+  width: clamp(160px, 22.4vw, 430px);
+  transform: translateX(clamp(24px, 5.21vw, 100px));
+}
+
+.responsive-page--list {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: clamp(112px, 7.29vw, 140px) clamp(44px, 5.21vw, 100px) clamp(130px, 8.85vw, 170px);
+  background: #f2f2f1;
+}
+
+.responsive-page--list > * {
+  width: min(100%, 1694px);
+  margin-inline: auto;
+}
+
+.purchase-flow {
+  width: 100%;
+  padding: clamp(112px, 7.29vw, 140px) clamp(44px, 5.21vw, 100px) clamp(130px, 8.85vw, 170px);
+  background: #eae6d9;
+}
+
+.purchase-flow .responsive-page--detail {
+  width: min(100%, 1694px) !important;
+  margin: 0 auto !important;
+}
+
+/* The four direction cards remain 2 × 2 and scale continuously with the viewport. */
+.direction-pill-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: clamp(10px, 2.1vw, 40px) !important;
+  width: min(82vw, 1040px) !important;
+  margin: clamp(48px, 4.17vw, 80px) auto 0 !important;
+}
+
+.direction-pill-grid img {
+  display: block;
+  width: 100% !important;
+  min-width: 0;
+  max-width: 100%;
+  height: auto !important;
+}
+
+@media (max-width: 1024px) {
+  .case-study--kiehls .case-section--overview {
+    padding: 90px 44px 110px !important;
+  }
+
+  .case-study--kiehls .kiehls-contribution dl > div {
+    grid-template-columns: minmax(130px, 210px) minmax(0, 1fr) !important;
+  }
+
+  .responsive-experience > .case-heading {
+    padding: 90px 44px 0;
+  }
+
+  .responsive-experience > .responsive-breakpoints,
+  .responsive-experience > .responsive-page--main {
+    width: calc(100% - 88px);
+  }
+
+  .responsive-main-hero {
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, .8fr);
+  }
+
+  .responsive-main-hero__mobile {
+    width: min(100%, clamp(175px, 30vw, 330px));
+    margin-left: -18px;
+  }
+
+  .responsive-main-promotion {
+    grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+  }
+
+  .responsive-main-promotion__mobile {
+    width: min(100%, clamp(150px, 24vw, 270px));
+    transform: translateX(clamp(18px, 4vw, 42px));
+  }
+
+  .responsive-page--list,
+  .purchase-flow {
+    padding-inline: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup-slider {
+    position: relative !important;
+    container-type: inline-size;
+  }
+
+  .popup-slide__content {
+    min-height: 0 !important;
+  }
+
+  .popup-slider__controls {
+    position: absolute !important;
+    z-index: 3;
+    top: min(75cqw, 375px) !important;
+    left: 50% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    width: min(100%, 500px) !important;
+    margin: 0 !important;
+    padding-inline: 10px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+  }
+
+  .popup-slider__button {
+    width: 46px !important;
+    pointer-events: auto;
+    box-shadow: 0 6px 20px rgba(6, 23, 34, .12);
+  }
+
+  .case-study--kiehls .case-section--overview {
+    padding: 72px 20px 90px !important;
+  }
+
+  .case-study--kiehls .kiehls-team > p {
+    flex-wrap: wrap;
+  }
+
+  .case-study--kiehls .kiehls-team > p span {
+    font-size: clamp(11px, 3vw, 13px) !important;
+  }
+
+  .case-study--kiehls .kiehls-contribution dl > div {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .case-study--kiehls .kiehls-contribution dt {
+    text-align: left;
+  }
+
+  .case-study--kiehls .case-section--overview .case-meta.case-meta--six {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    justify-items: stretch !important;
+    align-items: start !important;
+    width: min(calc(100% - 24px), 430px) !important;
+    margin-inline: auto !important;
+    padding-top: 60px !important;
+    text-align: center !important;
+  }
+
+  .case-study--kiehls .case-section--overview .case-meta.case-meta--six > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    text-align: center !important;
+  }
+
+  .case-study--kiehls .case-section--overview .case-meta.case-meta--six dt,
+  .case-study--kiehls .case-section--overview .case-meta.case-meta--six dd {
+    width: 100% !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .case-study--kiehls .kiehls-analysis__closing {
+    width: min(calc(100% - 40px), 390px) !important;
+    margin: 56px auto 68px !important;
+    padding: 0 !important;
+    font-size: clamp(14px, 3.7vw, 17px) !important;
+    line-height: 1.55 !important;
+    text-align: center !important;
+    word-break: keep-all !important;
+  }
+
+  .case-study--kiehls .kiehls-analysis__closing br {
+    display: none !important;
+  }
+
+  .hero-banner-slider {
+    --hero-banner-width: calc(100% - 16px);
+    width: 100% !important;
+  }
+
+  .hero-banner-slider__viewport {
+    width: var(--hero-banner-width) !important;
+  }
+
+  .hero-banner-slide > img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+
+  .hero-banner-slide__content {
+    width: 100% !important;
+    max-width: 360px !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-banner-slider__button {
+    top: min(22cqw, 108px) !important;
+  }
+
+  .hero-banner-showcase {
+    min-height: 0 !important;
+    padding-bottom: 64px !important;
+  }
+
+  .detail-showcase {
+    padding-top: 64px !important;
+  }
+
+  .responsive-experience > .case-heading {
+    padding: 80px 20px 0;
+  }
+
+  .responsive-experience > .responsive-breakpoints,
+  .responsive-experience > .responsive-page--main {
+    width: calc(100% - 40px);
+  }
+
+  .responsive-main-hero,
+  .responsive-main-promotion {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .responsive-main-hero__mobile {
+    width: min(80vw, 380px);
+    margin-inline: auto;
+  }
+
+  .responsive-main-promotion__mobile {
+    width: min(66vw, 300px);
+    margin-inline: auto;
+    transform: none;
+  }
+
+  .responsive-page--main {
+    padding-bottom: 110px;
+  }
+
+  .responsive-page--list,
+  .purchase-flow {
+    padding: 80px 20px 100px;
+  }
+
+  .direction-pill-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: min(82vw, 360px) !important;
+    gap: clamp(12px, 3.5vw, 18px) !important;
+  }
+}
