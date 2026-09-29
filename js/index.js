@@ -1049,8 +1049,12 @@ if (heroBannerSlider) {
   const prevButton = heroBannerSlider.querySelector("[data-hero-banner-prev]");
   const nextButton = heroBannerSlider.querySelector("[data-hero-banner-next]");
   const status = heroBannerSlider.querySelector("[data-hero-banner-status]");
+  const mobileAutoplayQuery = window.matchMedia("(max-width: 784px)");
+  const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   let activeIndex = 0;
   let pointerStartX = null;
+  let autoplayTimer = 0;
+  let isSliderVisible = false;
 
   const normalizeIndex = (index) => (index + slides.length) % slides.length;
 
@@ -1084,10 +1088,26 @@ if (heroBannerSlider) {
     }
   };
 
-  prevButton?.addEventListener("click", () => updateHeroBanner(activeIndex - 1));
-  nextButton?.addEventListener("click", () => updateHeroBanner(activeIndex + 1));
+  const stopMobileAutoplay = () => {
+    window.clearInterval(autoplayTimer);
+    autoplayTimer = 0;
+  };
+
+  const startMobileAutoplay = () => {
+    stopMobileAutoplay();
+    if (!mobileAutoplayQuery.matches || reducedMotionQuery.matches || document.hidden || !isSliderVisible || slides.length < 2) return;
+    autoplayTimer = window.setInterval(() => updateHeroBanner(activeIndex + 1, false), 3600);
+  };
+
+  const restartMobileAutoplay = () => {
+    stopMobileAutoplay();
+    startMobileAutoplay();
+  };
+
+  prevButton?.addEventListener("click", () => { updateHeroBanner(activeIndex - 1); restartMobileAutoplay(); });
+  nextButton?.addEventListener("click", () => { updateHeroBanner(activeIndex + 1); restartMobileAutoplay(); });
   navButtons.forEach((button) => {
-    button.addEventListener("click", () => updateHeroBanner(Number(button.dataset.index)));
+    button.addEventListener("click", () => { updateHeroBanner(Number(button.dataset.index)); restartMobileAutoplay(); });
   });
 
   viewport?.addEventListener("keydown", (event) => {
@@ -1096,6 +1116,7 @@ if (heroBannerSlider) {
   });
 
   viewport?.addEventListener("pointerdown", (event) => {
+    stopMobileAutoplay();
     pointerStartX = event.clientX;
   });
 
@@ -1103,13 +1124,25 @@ if (heroBannerSlider) {
     if (pointerStartX === null) return;
     const distance = event.clientX - pointerStartX;
     pointerStartX = null;
-    if (Math.abs(distance) < 45) return;
-    updateHeroBanner(activeIndex + (distance < 0 ? 1 : -1));
+    if (Math.abs(distance) >= 45) updateHeroBanner(activeIndex + (distance < 0 ? 1 : -1));
+    startMobileAutoplay();
   });
 
   viewport?.addEventListener("pointercancel", () => {
     pointerStartX = null;
+    startMobileAutoplay();
   });
+
+  const heroBannerObserver = new IntersectionObserver(([entry]) => {
+    isSliderVisible = entry.isIntersecting;
+    if (isSliderVisible) startMobileAutoplay();
+    else stopMobileAutoplay();
+  }, { threshold: 0.25 });
+
+  heroBannerObserver.observe(heroBannerSlider);
+  document.addEventListener("visibilitychange", () => document.hidden ? stopMobileAutoplay() : startMobileAutoplay());
+  mobileAutoplayQuery.addEventListener?.("change", startMobileAutoplay);
+  reducedMotionQuery.addEventListener?.("change", startMobileAutoplay);
 }
 
 // BRAND CONTENT MODAL

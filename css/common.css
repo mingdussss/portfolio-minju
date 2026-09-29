@@ -70,6 +70,7 @@ body {
 .section-rail__index {
   top: 9.5%;
   font-size: var(--rail-index-size);
+  letter-spacing: 7px;
 }
 
 .section-rail__portfolio {

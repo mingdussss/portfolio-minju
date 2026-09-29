@@ -247,7 +247,7 @@
 .responsive-product-details__copy p {
   margin-top: 16px;
   color: #111;
-  font-size: clamp(17px, 1.25vw, 24px);
+  font-size: clamp(16px, 1.25vw, 20px);
   font-weight: 500;
   line-height: 1.55;
 }
@@ -369,6 +369,15 @@
 }
 
 @media (max-width: 768px) {
+  .forme-flow .case-heading p strong {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .forme-flow .case-heading p strong + br {
+    display: none;
+  }
+
   .popup-slider {
     position: relative !important;
     container-type: inline-size;
@@ -510,8 +519,8 @@
 
   .responsive-main-promotion {
     grid-template-areas:
-      "mobile"
       "web"
+      "mobile"
       "copy";
   }
 
@@ -553,13 +562,13 @@
 
   .responsive-experience .responsive-page__copy h5,
   .responsive-product-details__copy h5 {
-    font-size: 21px;
+    font-size: 18px;
   }
 
   .responsive-experience .responsive-page__copy p,
   .responsive-product-details__copy p {
     margin-top: 12px;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .responsive-product-details__visual {
@@ -800,7 +809,7 @@
   background: rgba(255, 255, 255, .96);
   box-shadow: 0 5px 14px rgba(6, 23, 34, .2);
   backdrop-filter: blur(10px);
-  font-size: 13px;
+  font-size: clamp(11px, calc(9.6197px + 0.1761vw), 13px);
   font-weight: 600;
   line-height: 1;
   white-space: nowrap;
@@ -808,7 +817,7 @@
 }
 
 .project-sticky-links a span {
-  font-size: 15px;
+  font-size: clamp(12px, calc(9.9296px + 0.2641vw), 15px);
 }
 
 .project-sticky-links a[data-project-link-pending] {
