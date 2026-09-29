@@ -160,6 +160,7 @@
 }
 
 .responsive-main-promotion {
+  position: relative;
   grid-template-columns: minmax(0, 40.5fr) minmax(0, 59.5fr);
 }
 
@@ -176,8 +177,15 @@
 }
 
 .responsive-main-promotion__mobile {
+  position: relative;
+  z-index: 2;
   width: clamp(160px, 22.4vw, 430px);
   transform: translateX(clamp(24px, 5.21vw, 100px));
+}
+
+.responsive-main-promotion__web {
+  position: relative;
+  z-index: 1;
 }
 
 .responsive-page--list {
@@ -202,6 +210,81 @@
 .purchase-flow .responsive-page--detail {
   width: min(100%, 1694px) !important;
   margin: 0 auto !important;
+}
+
+.product-details-flow {
+  width: 100%;
+  padding: 0 clamp(44px, 5.21vw, 100px);
+  overflow: hidden;
+  background: #fefbf0;
+}
+
+.responsive-product-details {
+  display: grid;
+  grid-template-columns: minmax(330px, .72fr) minmax(0, 1.28fr);
+  align-items: center;
+  gap: clamp(40px, 4.17vw, 80px);
+  width: min(100%, 1694px);
+  margin: 0 auto;
+}
+
+.responsive-product-details__copy {
+  align-self: center;
+  min-width: 0;
+  word-break: keep-all;
+}
+
+.responsive-experience .responsive-page__copy h5,
+.responsive-product-details__copy h5 {
+  margin: 0;
+  color: #216c99;
+  font-size: clamp(21px, 1.56vw, 30px);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.responsive-experience .responsive-page__copy p,
+.responsive-product-details__copy p {
+  margin-top: 16px;
+  color: #111;
+  font-size: clamp(17px, 1.25vw, 24px);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.responsive-product-details__visual {
+  position: relative;
+  align-self: end;
+  min-width: 0;
+}
+
+.responsive-product-details__pages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 300px));
+  justify-content: end;
+  gap: clamp(18px, 1.67vw, 32px);
+  width: min(68%, 632px);
+  margin-left: auto;
+  align-items: end;
+}
+
+.responsive-product-details__pages img {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+}
+
+.responsive-product-details__phone {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: min(58%, 560px);
+  height: auto;
+  transform: translateY(-50%);
+  filter: drop-shadow(0 22px 36px rgba(49, 43, 36, .12));
 }
 
 /* The four direction cards remain 2 × 2 and scale continuously with the viewport. */
@@ -260,6 +343,28 @@
   .responsive-page--list,
   .purchase-flow {
     padding-inline: 44px;
+  }
+
+  .product-details-flow {
+    padding-inline: 44px;
+  }
+
+  .responsive-product-details {
+    grid-template-columns: minmax(260px, .68fr) minmax(0, 1.32fr);
+    gap: 28px;
+  }
+
+  .responsive-product-details__copy p br {
+    display: none;
+  }
+
+  .responsive-product-details__pages {
+    width: min(70%, 500px);
+    gap: 14px;
+  }
+
+  .responsive-product-details__phone {
+    width: min(61%, 390px);
   }
 }
 
@@ -403,6 +508,13 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .responsive-main-promotion {
+    grid-template-areas:
+      "mobile"
+      "web"
+      "copy";
+  }
+
   .responsive-main-hero__mobile {
     width: min(80vw, 380px);
     margin-inline: auto;
@@ -423,9 +535,689 @@
     padding: 80px 20px 100px;
   }
 
+  .product-details-flow {
+    padding: 0 20px;
+  }
+
+  .responsive-product-details {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 44px;
+    margin-top: 0;
+  }
+
+  .responsive-product-details__copy {
+    width: min(100%, 390px);
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .responsive-experience .responsive-page__copy h5,
+  .responsive-product-details__copy h5 {
+    font-size: 21px;
+  }
+
+  .responsive-experience .responsive-page__copy p,
+  .responsive-product-details__copy p {
+    margin-top: 12px;
+    font-size: 16px;
+  }
+
+  .responsive-product-details__visual {
+    position: relative;
+    display: block;
+    width: min(100%, 390px);
+    margin-inline: auto;
+  }
+
+  .responsive-product-details__phone {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: min(70vw, 320px);
+    transform: translate(-50%, -50%);
+  }
+
+  .responsive-product-details__pages {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+    opacity: .82;
+  }
+
   .direction-pill-grid {
     grid-template-columns: minmax(0, 1fr) !important;
     width: min(82vw, 360px) !important;
     gap: clamp(12px, 3.5vw, 18px) !important;
+  }
+}
+
+/* Project motion: each visual has its own scroll trigger and purpose. */
+.motion-mockup.reveal {
+  overflow: visible;
+}
+
+.motion-mockup.reveal img,
+.responsive-page.reveal .motion-mockup-image {
+  opacity: 0;
+  transform: translateY(34px) scale(.955) !important;
+  transform-origin: 50% 55%;
+  transition:
+    opacity .75s var(--ease-out),
+    transform 1.05s var(--ease-out) !important;
+  will-change: opacity, transform;
+}
+
+.motion-mockup.reveal.is-visible img,
+.responsive-page.reveal.is-visible .motion-mockup-image {
+  opacity: 1;
+  transform: translateY(0) scale(1) !important;
+}
+
+.kiehls-contribution.reveal dd span {
+  width: 0 !important;
+  transition: width 1.15s cubic-bezier(.22, 1, .36, 1) .15s;
+  will-change: width;
+}
+
+.kiehls-contribution.reveal dd b {
+  opacity: 0;
+  transform: translate(10px, -50%);
+  transition: opacity .35s ease .25s, transform .6s var(--ease-out) .25s;
+}
+
+.kiehls-contribution.reveal.is-visible dd span {
+  width: var(--rate) !important;
+}
+
+.kiehls-contribution.reveal.is-visible dd b {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+.stagger-cards.reveal > article,
+.stagger-cards.reveal > div,
+.stagger-cards.reveal > figure,
+.stagger-cards.reveal > img,
+.stagger-cards.reveal > span {
+  opacity: 0;
+  transform: translateY(30px) scale(.98);
+  transition:
+    opacity .6s var(--ease-out),
+    transform .75s var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.stagger-cards.reveal.is-visible > article,
+.stagger-cards.reveal.is-visible > div,
+.stagger-cards.reveal.is-visible > figure,
+.stagger-cards.reveal.is-visible > img,
+.stagger-cards.reveal.is-visible > span {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.stagger-cards.reveal.is-visible > :nth-of-type(1) { transition-delay: .05s; }
+.stagger-cards.reveal.is-visible > :nth-of-type(2) { transition-delay: .14s; }
+.stagger-cards.reveal.is-visible > :nth-of-type(3) { transition-delay: .23s; }
+.stagger-cards.reveal.is-visible > :nth-of-type(4) { transition-delay: .32s; }
+.stagger-cards.reveal.is-visible > :nth-of-type(5) { transition-delay: .41s; }
+.stagger-cards.reveal.is-visible > :nth-of-type(6) { transition-delay: .5s; }
+
+.mobile-mockup-motion.reveal {
+  opacity: 0;
+  translate: 34px 0;
+  scale: .97;
+  transform: none;
+  transition:
+    opacity .65s ease,
+    translate .9s var(--ease-out),
+    scale .9s var(--ease-out);
+  will-change: opacity, translate, scale;
+}
+
+.mobile-mockup-motion.reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+  animation: none;
+}
+
+/* KIEHL'S project: alternate motion directions instead of one repeated reveal. */
+.kiehls-heritage.reveal > figure,
+.persona-layout.reveal > .persona-profile,
+.persona-layout.reveal > .persona-details,
+.responsive-main-hero.reveal > .responsive-main-hero__web,
+.responsive-main-promotion.reveal > .responsive-main-promotion__mobile,
+.responsive-main-promotion.reveal > .responsive-main-promotion__web,
+.responsive-product-details.reveal > .responsive-product-details__copy,
+.responsive-product-details.reveal > .responsive-product-details__visual {
+  opacity: 0;
+  transition:
+    opacity .7s ease,
+    translate .95s var(--ease-out),
+    scale .95s var(--ease-out);
+  will-change: opacity, translate, scale;
+}
+
+.kiehls-heritage.reveal > figure:first-child,
+.persona-layout.reveal > .persona-profile,
+.responsive-main-promotion.reveal > .responsive-main-promotion__mobile,
+.responsive-product-details.reveal > .responsive-product-details__copy {
+  translate: -34px 0;
+}
+
+.kiehls-heritage.reveal > figure:last-child,
+.persona-layout.reveal > .persona-details,
+.responsive-main-promotion.reveal > .responsive-main-promotion__web,
+.responsive-product-details.reveal > .responsive-product-details__visual {
+  translate: 34px 0;
+}
+
+.responsive-main-hero.reveal > .responsive-main-hero__web {
+  translate: 0 28px;
+  scale: .975;
+}
+
+.kiehls-heritage.reveal.is-visible > figure,
+.persona-layout.reveal.is-visible > .persona-profile,
+.persona-layout.reveal.is-visible > .persona-details,
+.responsive-main-hero.reveal.is-visible > .responsive-main-hero__web,
+.responsive-main-promotion.reveal.is-visible > .responsive-main-promotion__mobile,
+.responsive-main-promotion.reveal.is-visible > .responsive-main-promotion__web,
+.responsive-product-details.reveal.is-visible > .responsive-product-details__copy,
+.responsive-product-details.reveal.is-visible > .responsive-product-details__visual {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+}
+
+.kiehls-heritage.reveal.is-visible > figure:last-child,
+.persona-layout.reveal.is-visible > .persona-details,
+.responsive-main-promotion.reveal.is-visible > .responsive-main-promotion__web,
+.responsive-product-details.reveal.is-visible > .responsive-product-details__visual {
+  transition-delay: .12s;
+}
+
+/* Persona comment gently resolves after the detail panel enters. */
+.persona-layout.reveal .persona-details__comment {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(14px) scale(.985);
+  transition:
+    opacity .75s ease .38s,
+    filter .9s ease .38s,
+    transform .9s var(--ease-out) .38s;
+  will-change: opacity, filter, transform;
+}
+
+.persona-layout.reveal.is-visible .persona-details__comment {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0) scale(1);
+}
+
+/* Archive navigation hands over to compact project links. */
+.archive-sticky-nav {
+  transition: opacity .25s ease, visibility .25s ease;
+}
+
+.archive-sticky-nav.is-project-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.project-sticky-links {
+  position: fixed;
+  top: 14px;
+  right: clamp(14px, 2.08vw, 40px);
+  z-index: 45;
+}
+
+.project-sticky-links[hidden],
+.project-sticky-links__set[hidden] {
+  display: none;
+}
+
+.project-sticky-links__set {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-sticky-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 8px 18px;
+  border: 1px solid rgba(6, 23, 34, .08);
+  border-radius: 999px;
+  color: #111;
+  background: rgba(255, 255, 255, .96);
+  box-shadow: 0 5px 14px rgba(6, 23, 34, .2);
+  backdrop-filter: blur(10px);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  transition: transform .25s var(--ease-out), box-shadow .25s ease;
+}
+
+.project-sticky-links a span {
+  font-size: 15px;
+}
+
+.project-sticky-links a[data-project-link-pending] {
+  cursor: default;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-sticky-links a:not([data-project-link-pending]):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(6, 23, 34, .24);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-sticky-links {
+    top: 10px;
+    right: 10px;
+  }
+
+  .project-sticky-links__set {
+    gap: 6px;
+  }
+
+  .project-sticky-links a {
+    min-height: 34px;
+    padding: 7px 12px;
+    font-size: 11px;
+  }
+
+  .case-study--kiehls .case-cover__role {
+    top: 58px;
+    right: 12px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .stagger-cards > article,
+  .stagger-cards > div {
+    transition-property: opacity, transform, box-shadow;
+  }
+
+  .stagger-cards.is-visible > article:hover,
+  .stagger-cards.is-visible > div:hover {
+    transform: translateY(-7px) scale(1.012);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-mockup.reveal img,
+  .responsive-page.reveal .motion-mockup-image,
+  .stagger-cards.reveal > article,
+  .stagger-cards.reveal > div,
+  .stagger-cards.reveal > figure,
+  .stagger-cards.reveal > img,
+  .stagger-cards.reveal > span {
+    opacity: 1;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .kiehls-contribution.reveal dd span {
+    width: var(--rate) !important;
+    transition: none;
+  }
+
+  .kiehls-contribution.reveal dd b {
+    opacity: 1;
+    transform: translateY(-50%);
+    transition: none;
+  }
+
+  .mobile-mockup-motion.reveal,
+  .mobile-mockup-motion.reveal.is-visible {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+
+  .kiehls-heritage.reveal > figure,
+  .persona-layout.reveal > .persona-profile,
+  .persona-layout.reveal > .persona-details,
+  .persona-layout.reveal .persona-details__comment,
+  .responsive-main-hero.reveal > .responsive-main-hero__web,
+  .responsive-main-promotion.reveal > .responsive-main-promotion__mobile,
+  .responsive-main-promotion.reveal > .responsive-main-promotion__web,
+  .responsive-product-details.reveal > .responsive-product-details__copy,
+  .responsive-product-details.reveal > .responsive-product-details__visual {
+    opacity: 1;
+    filter: none;
+    translate: 0 0;
+    scale: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* CONTACT RESPONSIVE */
+@media (max-width: 1024px) {
+  .contact-section__inner {
+    padding: 88px 44px 58px;
+  }
+
+  .contact-section__statement {
+    font-size: clamp(38px, 5.08vw, 52px);
+  }
+
+  .contact-section__details {
+    width: min(100%, 880px);
+  }
+
+  .contact-section__intro {
+    grid-template-columns: minmax(260px, .62fr) minmax(320px, 1fr);
+  }
+
+  .contact-section__row {
+    grid-template-columns: minmax(220px, .58fr) minmax(0, 1fr);
+  }
+
+  .contact-section__copyright {
+    position: static;
+    margin-top: 34px;
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section,
+  .contact-section__inner {
+    min-height: 100svh;
+  }
+
+  .contact-section__inner {
+    padding: 72px 20px 40px;
+  }
+
+  .contact-section__statement {
+    font-size: clamp(30px, 8.53vw, 42px);
+    line-height: 1.42;
+  }
+
+  .contact-section__statement span {
+    display: inline;
+  }
+
+  .contact-section__details {
+    margin-top: clamp(130px, 28vw, 210px);
+  }
+
+  .contact-section__intro {
+    display: block;
+    min-height: 0;
+  }
+
+  .contact-section__intro h2 {
+    font-size: clamp(38px, 11.2vw, 52px);
+  }
+
+  .contact-section__intro p {
+    margin-top: 24px;
+    padding-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .contact-section__list {
+    margin-top: 34px;
+  }
+
+  .contact-section__row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    min-height: 0;
+    padding: 22px 0 24px;
+  }
+
+  .contact-section__row strong {
+    font-size: 18px;
+  }
+
+  .contact-section__row span {
+    font-size: clamp(20px, 5.87vw, 26px);
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .contact-section__copyright {
+    position: static;
+    margin-top: 34px;
+    font-size: 27px;
+    text-align: right;
+  }
+}
+
+/* MOBILE POLISH — KIEHL'S PERSONA / RESPONSIVE / CONTACT */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Keep the contact composition from collapsing before the true mobile layout. */
+  .contact-section__inner {
+    padding: 76px 44px 48px;
+  }
+
+  .contact-section__statement {
+    font-size: clamp(34px, 4.5vw, 46px);
+  }
+
+  .contact-section__details {
+    width: min(62vw, 680px);
+  }
+
+  .contact-section__intro {
+    grid-template-columns: minmax(180px, .62fr) minmax(0, 1fr);
+    min-height: 68px;
+  }
+
+  .contact-section__intro h2 {
+    font-size: clamp(30px, 3.8vw, 39px);
+  }
+
+  .contact-section__intro p {
+    font-size: clamp(12px, 1.55vw, 16px);
+  }
+
+  .contact-section__row {
+    grid-template-columns: minmax(170px, .58fr) minmax(0, 1fr);
+    min-height: 62px;
+  }
+
+  .contact-section__list {
+    margin-top: 22px;
+  }
+
+  .contact-section__row strong,
+  .contact-section__row span {
+    font-size: clamp(20px, 2.65vw, 27px);
+  }
+
+  .contact-section__copyright {
+    position: absolute;
+    right: 44px;
+    bottom: 54px;
+    margin: 0;
+    font-size: clamp(22px, 2.7vw, 28px);
+  }
+}
+
+@media (max-width: 768px) {
+  /* The wordmark should support the story, not fill the whole viewport. */
+  .case-study--kiehls .kiehls-wordmark {
+    width: min(68vw, 320px) !important;
+    margin-inline: auto !important;
+  }
+
+  .case-study--kiehls .kiehls-wordmark img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Persona: the quote wipes in first, followed by the two information cards. */
+  .persona-layout.reveal .persona-details__comment {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    filter: blur(3px);
+    transform: translateY(10px);
+    transition:
+      clip-path 1.05s cubic-bezier(.22, 1, .36, 1) .18s,
+      opacity .4s ease .18s,
+      filter .7s ease .18s,
+      transform .75s cubic-bezier(.22, 1, .36, 1) .18s;
+  }
+
+  .persona-layout.reveal.is-visible .persona-details__comment {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    filter: blur(0);
+    transform: translateY(0);
+  }
+
+  .persona-layout.reveal .persona-info {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .55s ease, transform .75s cubic-bezier(.22, 1, .36, 1);
+  }
+
+  .persona-layout.reveal .persona-info:first-of-type {
+    transition-delay: .42s;
+  }
+
+  .persona-layout.reveal .persona-info:last-of-type {
+    transition-delay: .58s;
+  }
+
+  .persona-layout.reveal.is-visible .persona-info {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .visual-identity-grid.reveal .visual-identity-item {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .55s ease, transform .72s cubic-bezier(.22, 1, .36, 1);
+  }
+
+  .visual-identity-grid.reveal.is-visible .visual-identity-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .visual-identity-grid.reveal.is-visible .visual-identity-column:first-child .visual-identity-item:nth-child(1) { transition-delay: .05s; }
+  .visual-identity-grid.reveal.is-visible .visual-identity-column:last-child .visual-identity-item:nth-child(1) { transition-delay: .16s; }
+  .visual-identity-grid.reveal.is-visible .visual-identity-column:first-child .visual-identity-item:nth-child(2) { transition-delay: .27s; }
+  .visual-identity-grid.reveal.is-visible .visual-identity-column:last-child .visual-identity-item:nth-child(2) { transition-delay: .38s; }
+
+  /* Product Details: a full-width white copy card leads directly into the visual. */
+  .product-details-flow {
+    padding: 0 20px !important;
+  }
+
+  .responsive-product-details {
+    gap: 0 !important;
+  }
+
+  .responsive-product-details__copy {
+    width: calc(100% + 40px) !important;
+    max-width: none !important;
+    margin: 0 -20px !important;
+    padding: 30px 20px 34px;
+    background: #fff;
+  }
+
+  .responsive-product-details__visual {
+    margin-top: 0 !important;
+  }
+
+  /* Contact keeps the same hierarchy as the desktop artwork at a smaller scale. */
+  .contact-section__inner {
+    padding: 58px 20px 34px;
+  }
+
+  .contact-section__statement {
+    font-size: clamp(27px, 7.8vw, 38px);
+    line-height: 1.45;
+  }
+
+  .contact-section__statement span {
+    display: block;
+  }
+
+  .contact-section__details {
+    margin-top: clamp(108px, 25vw, 170px);
+  }
+
+  .contact-section__intro {
+    display: grid;
+    grid-template-columns: minmax(138px, .8fr) minmax(0, 1fr);
+    align-items: end;
+    gap: 16px;
+  }
+
+  .contact-section__intro h2 {
+    gap: 8px;
+    font-size: clamp(27px, 7.4vw, 36px);
+  }
+
+  .contact-section__intro p {
+    margin: 0;
+    padding-bottom: 2px;
+    font-size: clamp(11px, 3.2vw, 15px);
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .contact-section__list {
+    margin-top: 22px;
+  }
+
+  .contact-section__row {
+    grid-template-columns: minmax(92px, .42fr) minmax(0, 1fr);
+    gap: 10px;
+    padding: 17px 0;
+  }
+
+  .contact-section__row strong {
+    font-size: clamp(16px, 4.7vw, 21px);
+  }
+
+  .contact-section__row span {
+    font-size: clamp(15px, 4.45vw, 20px);
+    line-height: 1.3;
+    text-align: right;
+  }
+
+  .contact-section__copyright {
+    margin-top: 26px;
+    font-size: clamp(21px, 6vw, 27px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .persona-layout.reveal .persona-details__comment,
+  .persona-layout.reveal .persona-info,
+  .visual-identity-grid.reveal .visual-identity-item {
+    opacity: 1;
+    clip-path: none;
+    filter: none;
+    transform: none;
+    transition: none;
   }
 }

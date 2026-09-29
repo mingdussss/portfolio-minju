@@ -1,0 +1,473 @@
+/* FORME project — Figma layout corrections */
+
+@media (min-width: 1025px) {
+  .case-cover--forme .case-cover__content h2 {
+    margin-top: 16px;
+    font-size: 80px;
+    line-height: 1.02;
+    letter-spacing: -.055em;
+  }
+}
+
+.case-section--forme-overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(180deg, #dfdfdf 0%, #dbe2e7 100%) !important;
+}
+
+.forme-concept {
+  background: linear-gradient(180deg, #dbe2e7 0%, #d7e1e8 100%) !important;
+}
+
+.case-section--forme-overview > .case-heading,
+.case-section--forme-overview > .forme-project-tag,
+.case-section--forme-overview > .case-overview-image,
+.case-section--forme-overview > .forme-responsive-note,
+.case-section--forme-overview > .case-meta--four {
+  flex: 0 0 auto;
+  margin-inline: auto !important;
+  text-align: center;
+}
+
+.case-section--forme-overview > .case-heading {
+  width: min(100%, 1720px);
+}
+
+.case-section--forme-overview > .case-heading h3 {
+  margin-top: 0;
+}
+
+.forme-project-tag {
+  width: max-content;
+  margin: clamp(28px, 2.08vw, 40px) auto 0;
+  padding: clamp(8px, .52vw, 10px) clamp(22px, 1.56vw, 30px);
+  border-radius: 999px;
+  color: #fff;
+  background: #555d78;
+  font-size: clamp(13px, .89vw, 17px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.case-section--forme-overview .case-overview-image {
+  width: min(100%, 1450px);
+  margin-top: clamp(58px, 4.17vw, 80px);
+}
+
+.forme-responsive-note {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: clamp(16px, 1.56vw, 30px);
+  width: min(100%, 1214px);
+  margin: clamp(42px, 3.13vw, 60px) auto 0;
+  text-align: center;
+  word-break: keep-all;
+}
+
+.forme-responsive-note strong {
+  color: #30364f;
+  font-size: clamp(18px, 1.35vw, 26px);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.forme-responsive-note span {
+  font-size: clamp(16px, 1.15vw, 22px);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.case-section--forme-overview .case-meta--four {
+  grid-template-columns: repeat(4, minmax(0, 260px));
+  justify-content: center;
+  width: min(100%, 1214px);
+  margin-top: clamp(34px, 2.6vw, 50px);
+}
+
+.case-section--forme-overview .case-meta--four > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 197px;
+  text-align: center !important;
+}
+
+.case-section--forme-overview .case-meta--four dt,
+.case-section--forme-overview .case-meta--four dd {
+  width: 100%;
+  margin-inline: auto;
+  text-align: center !important;
+}
+
+.case-section--forme-overview .case-meta--four dd {
+  margin-top: 16px;
+}
+
+/* 요약 문구와 카드가 동일한 중심축을 사용하도록 고정합니다. */
+.case-section--forme-overview .forme-responsive-note,
+.case-section--forme-overview .case-meta--four {
+  position: relative;
+  left: auto;
+  margin-inline: auto;
+}
+
+.forme-concept .case-heading p strong {
+  display: inline-block;
+  margin-bottom: clamp(16px, 1.25vw, 24px);
+}
+
+.forme-concept__keywords {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 320px));
+  justify-content: center;
+  gap: clamp(8px, 1.67vw, 32px);
+}
+
+.forme-concept__keywords span {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.forme-concept__keywords b {
+  font-size: clamp(20px, 2.08vw, 40px);
+  line-height: 1.2;
+}
+
+.forme-concept__keywords small {
+  margin-top: clamp(8px, .83vw, 16px);
+  font-size: clamp(14px, 1.15vw, 22px);
+  line-height: 1.35;
+}
+
+.forme-identity {
+  align-items: start;
+  gap: clamp(32px, 3.33vw, 64px);
+}
+
+.forme-identity .forme-identity__item {
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  background: transparent;
+  text-align: center;
+}
+
+.forme-identity .forme-identity__item h4 {
+  margin: 0;
+  color: #30364f;
+  font-size: clamp(20px, 1.35vw, 26px);
+  line-height: 1.35;
+}
+
+.forme-identity .forme-identity__item b {
+  margin-top: clamp(18px, 1.25vw, 24px);
+  font-size: clamp(17px, 1.15vw, 22px);
+  line-height: 1.4;
+}
+
+.forme-identity .forme-identity__item p {
+  min-height: 3.1em;
+  margin-top: clamp(10px, .73vw, 14px);
+  font-size: clamp(15px, .94vw, 18px);
+  line-height: 1.55;
+  word-break: keep-all;
+}
+
+.forme-identity .forme-identity__item img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: clamp(24px, 1.77vw, 34px) auto 0;
+}
+
+.forme-identity__item--logo img {
+  max-width: min(100%, 375px) !important;
+}
+
+.forme-identity__item--type img {
+  max-width: min(100%, 227px) !important;
+}
+
+.forme-identity__item--color img {
+  max-width: min(100%, 500px) !important;
+}
+
+/* FORME responsive page presentation */
+.forme-page-sections {
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(180deg, #171d30 0%, #5f6877 48%, #b8c7ce 100%);
+}
+
+.forme-page-block {
+  width: min(100%, 1540px);
+  margin-inline: auto;
+  padding: clamp(120px, 9.38vw, 180px) clamp(44px, 5.21vw, 100px);
+  text-align: center;
+}
+
+.forme-page-block + .forme-page-block {
+  padding-top: clamp(80px, 6.25vw, 120px);
+}
+
+.forme-page-block .forme-page-block__heading {
+  width: min(100%, 980px);
+  margin-inline: auto;
+  padding: 0;
+  text-align: center;
+  word-break: keep-all;
+}
+
+.forme-page-block__heading h3 {
+  margin: 0;
+  font-size: clamp(30px, 2.6vw, 50px);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.forme-page-block__heading b {
+  display: block;
+  margin-top: clamp(18px, 1.46vw, 28px);
+  font-size: clamp(20px, 1.56vw, 30px);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.forme-page-block__heading p {
+  margin-top: clamp(12px, .94vw, 18px);
+  font-size: clamp(16px, 1.15vw, 22px);
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.forme-page-block img.forme-page-block__mockup {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+}
+
+.forme-page-block img.forme-page-block__mockup--main {
+  width: min(100%, 1080px);
+  margin: clamp(54px, 4.17vw, 80px) auto 0;
+}
+
+.forme-page-block__cards {
+  display: grid;
+  gap: clamp(16px, 1.25vw, 24px);
+}
+
+.forme-page-block__cards--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: min(100%, 1260px);
+  margin: clamp(18px, 1.25vw, 24px) auto 0;
+}
+
+.forme-page-block__cards figure {
+  overflow: hidden;
+  min-width: 0;
+  border-radius: clamp(8px, .63vw, 12px);
+  color: #151923;
+  background: rgba(255, 255, 255, .9);
+  box-shadow: 0 18px 42px rgba(15, 22, 37, .12);
+}
+
+.forme-page-block__cards img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.forme-page-block__cards figcaption {
+  padding: clamp(18px, 1.56vw, 30px) clamp(14px, 1.25vw, 24px) clamp(22px, 1.88vw, 36px);
+  text-align: center;
+  word-break: keep-all;
+}
+
+.forme-page-block__cards figcaption b {
+  display: block;
+  font-size: clamp(17px, 1.15vw, 22px);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.forme-page-block__cards figcaption p {
+  margin-top: clamp(8px, .63vw, 12px);
+  font-size: clamp(14px, .94vw, 18px);
+  line-height: 1.5;
+}
+
+.forme-page-block__layout {
+  display: grid;
+  align-items: center;
+  gap: clamp(34px, 3.65vw, 70px);
+  margin-top: clamp(62px, 5.21vw, 100px);
+}
+
+.forme-page-block__layout--list {
+  grid-template-columns: minmax(240px, .7fr) minmax(0, 1.5fr);
+}
+
+.forme-page-block__layout--detail {
+  grid-template-columns: minmax(0, 1.5fr) minmax(240px, .7fr);
+}
+
+.forme-page-block__cards--stack {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.forme-page-block.forme-page-block--detail {
+  padding-bottom: clamp(150px, 11.46vw, 220px);
+}
+
+@media (max-width: 1024px) {
+  .case-cover--forme .case-cover__content h2 {
+    font-size: clamp(58px, 6.25vw, 80px);
+  }
+
+  .forme-identity {
+    gap: 28px;
+  }
+
+  .forme-identity .forme-identity__item p br {
+    display: none;
+  }
+
+  .case-section--forme-overview .case-meta--four {
+    grid-template-columns: repeat(2, minmax(0, 260px));
+    width: min(100%, 568px);
+  }
+
+  .forme-page-block {
+    padding-inline: 44px;
+  }
+
+  .forme-page-block__layout--list,
+  .forme-page-block__layout--detail {
+    grid-template-columns: minmax(210px, .68fr) minmax(0, 1.32fr);
+  }
+
+  .forme-page-block__layout--detail {
+    grid-template-columns: minmax(0, 1.32fr) minmax(210px, .68fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .case-cover--forme .case-cover__content h2 {
+    font-size: 42px;
+  }
+
+  .forme-responsive-note {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .case-section--forme-overview .forme-responsive-note,
+  .case-section--forme-overview .case-meta--four {
+    left: 0;
+  }
+
+  .case-section--forme-overview .case-meta--four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(100%, 520px);
+  }
+
+  .forme-responsive-note strong {
+    font-size: 18px;
+  }
+
+  .forme-responsive-note span {
+    font-size: 14px;
+  }
+
+  .forme-concept__keywords {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .forme-concept__keywords span {
+    width: 100%;
+    height: auto;
+  }
+
+  .forme-concept__keywords b {
+    font-size: clamp(16px, 4.27vw, 20px);
+  }
+
+  .forme-concept__keywords small {
+    margin-top: 6px;
+    font-size: clamp(11px, 3.2vw, 14px);
+  }
+
+  .forme-identity {
+    width: min(100%, 520px);
+    gap: 70px;
+  }
+
+  .forme-identity .forme-identity__item p {
+    min-height: 0;
+    font-size: 15px;
+  }
+
+  .forme-identity .forme-identity__item img {
+    margin-top: 24px;
+  }
+
+  .forme-page-block {
+    padding: 88px 20px;
+  }
+
+  .forme-page-block + .forme-page-block {
+    padding-top: 62px;
+  }
+
+  .forme-page-block__heading p br,
+  .forme-page-block__cards figcaption p br {
+    display: none;
+  }
+
+  .forme-page-block img.forme-page-block__mockup--main {
+    width: calc(100% + 24px);
+    max-width: none;
+    margin-left: -12px;
+  }
+
+  .forme-page-block__cards--three {
+    grid-template-columns: minmax(0, 1fr);
+    width: min(100%, 460px);
+  }
+
+  .forme-page-block__layout--list,
+  .forme-page-block__layout--detail {
+    grid-template-columns: minmax(0, 1fr);
+    width: min(100%, 520px);
+    margin-inline: auto;
+  }
+
+  .forme-page-block__layout--list > .forme-page-block__mockup {
+    grid-row: 1;
+  }
+
+  .forme-page-block__layout--detail > .forme-page-block__mockup {
+    grid-row: 1;
+  }
+
+  .forme-page-block__cards--stack {
+    grid-template-columns: minmax(0, 1fr);
+    width: min(100%, 420px);
+    margin-inline: auto;
+  }
+
+  .forme-page-block.forme-page-block--detail {
+    padding-bottom: 110px;
+  }
+}

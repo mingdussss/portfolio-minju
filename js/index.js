@@ -434,14 +434,55 @@ if (mount && window.THREE) {
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const revealTargets = document.querySelectorAll(".reveal");
 
+const animateParticipation = (section) => {
+  if (!section || section.dataset.gaugeAnimated === "true") return;
+
+  section.dataset.gaugeAnimated = "true";
+  const counters = section.querySelectorAll("dd b");
+  const duration = 1100;
+  const startedAt = performance.now();
+
+  const update = (now) => {
+    const progress = Math.min((now - startedAt) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+
+    counters.forEach((counter) => {
+      const target = Number.parseInt(counter.dataset.countTo || counter.textContent, 10);
+      if (!Number.isFinite(target)) return;
+      counter.textContent = `${Math.round(target * eased)}%`;
+    });
+
+    if (progress < 1) requestAnimationFrame(update);
+  };
+
+  requestAnimationFrame(update);
+};
+
+const participationSections = document.querySelectorAll(".kiehls-contribution.reveal");
+
+if (!prefersReducedMotion) {
+  participationSections.forEach((section) => {
+    section.querySelectorAll("dd b").forEach((counter) => {
+      counter.dataset.countTo = counter.textContent.replace(/[^0-9]/g, "");
+      counter.textContent = "0%";
+    });
+  });
+}
+
 if (prefersReducedMotion || !("IntersectionObserver" in window)) {
   revealTargets.forEach((target) => target.classList.add("is-visible"));
+  if (!prefersReducedMotion) {
+    participationSections.forEach((section) => animateParticipation(section));
+  }
 } else {
   const revealObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         entry.target.classList.add("is-visible");
+        if (entry.target.matches(".kiehls-contribution")) {
+          animateParticipation(entry.target);
+        }
         observer.unobserve(entry.target);
       });
     },
@@ -645,6 +686,45 @@ if (archiveStickyNav) {
 
   archiveSections.forEach((section) => archiveSectionObserver.observe(section));
   setActiveArchiveJump(0);
+}
+
+/* PROJECT LINK CONTROLS */
+const projectStickyLinks = document.querySelector("[data-project-sticky-links]");
+const projectControlSections = [...document.querySelectorAll("[data-project-controls]")];
+
+if (projectStickyLinks && projectControlSections.length) {
+  const projectLinkSets = [...projectStickyLinks.querySelectorAll("[data-project-link-set]")];
+  let projectControlFrame = 0;
+
+  projectStickyLinks.querySelectorAll("[data-project-link-pending]").forEach((link) => {
+    link.addEventListener("click", (event) => event.preventDefault());
+  });
+
+  const updateProjectControls = () => {
+    projectControlFrame = 0;
+    const probeY = Math.min(90, window.innerHeight * .14);
+    const activeSection = projectControlSections.find((section) => {
+      const rect = section.getBoundingClientRect();
+      return rect.top <= probeY && rect.bottom > probeY;
+    });
+    const activeProject = activeSection?.dataset.projectControls || "";
+
+    archiveStickyNav?.classList.toggle("is-project-hidden", Boolean(activeProject));
+    projectStickyLinks.hidden = !activeProject;
+
+    projectLinkSets.forEach((set) => {
+      set.hidden = set.dataset.projectLinkSet !== activeProject;
+    });
+  };
+
+  const requestProjectControlUpdate = () => {
+    if (projectControlFrame) return;
+    projectControlFrame = window.requestAnimationFrame(updateProjectControls);
+  };
+
+  window.addEventListener("scroll", requestProjectControlUpdate, { passive: true });
+  window.addEventListener("resize", requestProjectControlUpdate);
+  updateProjectControls();
 }
 
 /* POP-UP DESIGN SLIDER */
