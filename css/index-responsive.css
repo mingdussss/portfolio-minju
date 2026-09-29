@@ -728,7 +728,7 @@
 .responsive-main-promotion.reveal.is-visible > .responsive-main-promotion__web,
 .responsive-product-details.reveal.is-visible > .responsive-product-details__copy,
 .responsive-product-details.reveal.is-visible > .responsive-product-details__visual {
-  opacity: 1;
+  opacity: 0.92;
   translate: 0 0;
   scale: 1;
 }
@@ -1125,25 +1125,58 @@
   .visual-identity-grid.reveal.is-visible .visual-identity-column:first-child .visual-identity-item:nth-child(2) { transition-delay: .27s; }
   .visual-identity-grid.reveal.is-visible .visual-identity-column:last-child .visual-identity-item:nth-child(2) { transition-delay: .38s; }
 
-  /* Product Details: a full-width white copy card leads directly into the visual. */
+  /* Product Details: copy card sits over the lower-right image area on mobile. */
   .product-details-flow {
     padding: 0 20px !important;
   }
 
   .responsive-product-details {
+    position: relative;
+    display: block;
     gap: 0 !important;
+    padding-bottom: 0;
   }
 
   .responsive-product-details__copy {
-    width: calc(100% + 40px) !important;
+    position: absolute;
+    z-index: 3;
+    right: auto !important;
+    bottom: clamp(46px, 13vw, 54px);
+    left: 50% !important;
+    width: min(78%, 300px) !important;
     max-width: none !important;
-    margin: 0 -20px !important;
-    padding: 30px 20px 34px;
+    margin: 0 !important;
+    padding: 18px 14px 20px;
     background: #fff;
+    text-align: center !important;
+    transform: translateX(-50%);
   }
 
   .responsive-product-details__visual {
     margin-top: 0 !important;
+  }
+
+  .responsive-product-details__phone {
+    top: 40% !important;
+  }
+
+  .responsive-product-details__copy h5 {
+    font-size: clamp(14px, 4vw, 18px) !important;
+  }
+
+  .responsive-product-details__copy p {
+    margin-top: 8px !important;
+    font-size: clamp(11px, 3.2vw, 14px) !important;
+    line-height: 1.5;
+  }
+
+  .responsive-product-details__copy p br {
+    display: none;
+  }
+
+  /* Mobile advances automatically, so the oversized side arrows are unnecessary. */
+  .hero-banner-slider__button {
+    display: none !important;
   }
 
   /* Contact keeps the same hierarchy as the desktop artwork at a smaller scale. */

@@ -15,10 +15,11 @@
 .product-close {
   position: fixed;
   z-index: 1000;
-  top: clamp(18px, 2vw, 38px);
-  left: 50%;
+  top: clamp(16px, 1.46vw, 28px);
+  right: auto !important;
+  left: 50vw !important;
   display: grid;
-  width: clamp(58px, 4.167vw, 80px);
+  width: clamp(40px, 2.5vw, 48px);
   aspect-ratio: 1;
   place-items: center;
   border: 1px solid rgba(6, 23, 34, .14);
@@ -33,8 +34,8 @@
 }
 
 .product-close svg {
-  width: 35%;
-  height: 35%;
+  width: 30%;
+  height: 30%;
 }
 
 .product-close:hover {
@@ -268,8 +269,11 @@
 
 @media (max-width: 784px) {
   .product-close {
-    top: 16px;
-    width: 52px;
+    inset: 12px auto auto 50vw !important;
+    width: 36px !important;
+    height: 36px !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
   }
 
   .product-overview {

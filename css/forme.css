@@ -361,6 +361,11 @@
 }
 
 @media (max-width: 768px) {
+  .case-section--forme-overview {
+    padding-top: 150px !important;
+    padding-bottom: 24px !important;
+  }
+
   .case-cover--forme .case-cover__content h2 {
     font-size: 42px;
   }
@@ -394,6 +399,42 @@
     gap: 8px;
   }
 
+  .forme-concept,
+  .forme-flow {
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 80px 20px 48px !important;
+  }
+
+  .forme-concept {
+    padding-top: 150px !important;
+    padding-bottom: 120px !important;
+  }
+
+  .forme-flow {
+    padding-top: 150px !important;
+  }
+
+  .forme-concept .case-heading h3,
+  .forme-flow .case-heading h3 {
+    margin-top: 0 !important;
+  }
+
+  .forme-concept .case-heading,
+  .forme-flow .case-heading {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .forme-concept .case-heading p strong {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .forme-concept .case-heading p br {
+    display: block !important;
+  }
+
   .forme-concept__keywords span {
     width: 100%;
     height: auto;
@@ -422,8 +463,34 @@
     margin-top: 24px;
   }
 
+  .forme-flow__grid {
+    margin-top: 46px;
+    gap: 28px;
+  }
+
+  .forme-flow__grid article > div {
+    height: min(86vw, 360px);
+  }
+
+  .forme-flow__grid b {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .forme-flow__grid h4 {
+    margin-top: 9px;
+    font-size: 17px;
+  }
+
+  .forme-flow__grid p {
+    min-height: 0;
+    padding: 8px 22px 26px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
   .forme-page-block {
-    padding: 88px 20px;
+    padding: 150px 20px;
   }
 
   .forme-page-block + .forme-page-block {

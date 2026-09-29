@@ -13,10 +13,10 @@
   /* 1920px 피그마 원본 타이포 기준값 */
   --section-title-size: clamp(68px, 6.25vw, 120px);
   --section-lead-size: clamp(24px, 2.084vw, 40px);
-  --about-copy-size: clamp(20px, 1.667vw, 32px);
-  --about-scope-size: clamp(18px, 1.563vw, 30px);
-  --card-title-size: clamp(20px, 1.771vw, 34px);
-  --card-copy-size: clamp(17px, 1.407vw, 27px);
+  --about-copy-size: clamp(14px, 1.667vw, 20px);
+  --about-scope-size: clamp(14px, 1.563vw, 20px);
+  --card-title-size: clamp(14px, 1.771vw, 18px);
+  --card-copy-size: clamp(16px, 1.407vw, 20px);
   --tools-title-size: clamp(20px, 1.771vw, 34px);
 }
 
@@ -2973,14 +2973,14 @@ body.is-modal-open {
 }
 
 .case-meta dt {
-  font-size: clamp(19px, 1.46vw, 28px);
+  font-size: clamp(14px, 1.3vw, 20px);
   font-weight: 600;
   line-height: 1.4;
 }
 
 .case-meta dd {
   margin-top: 16px;
-  font-size: clamp(17px, 1.25vw, 24px);
+  font-size: clamp(14px, 1.25vw, 18px);
   line-height: 1.4;
 }
 
@@ -3996,7 +3996,7 @@ body.is-modal-open {
 
   .case-study--kiehls .kiehls-analysis .case-heading p {
     margin-top: 32px;
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .case-study--kiehls .kiehls-heritage {
@@ -4050,11 +4050,11 @@ body.is-modal-open {
   }
 
   .case-study--kiehls .kiehls-values b {
-    min-width: 183px;
-    padding: 10px 17px;
-    font-size: 24px;
-    line-height: 1.4;
-  }
+      min-width: 150px;
+      padding: 10px 10px;
+      font-size: 16px;
+      line-height: 1.4;
+    }
 
   .case-study--kiehls .kiehls-values p {
     margin-top: 16px;
