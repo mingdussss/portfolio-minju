@@ -75,12 +75,12 @@ body {
 
 .section-rail__portfolio {
   top: 49%;
-  font-size: var(--rail-info-size);
+  font-size: var(--rail-index-size);
 }
 
 .section-rail__name {
   bottom: 8%;
-  font-size: var(--rail-info-size);
+  font-size: var(--rail-index-size);
 }
 
 .section-inner {

@@ -3226,9 +3226,9 @@ body.is-modal-open {
   gap: min(.7292vw, 14px);
   align-items: flex-start;
   margin: 0;
-  font-size: clamp(17px, 1.3542vw, 26px);
+  font-size: clamp(14px, 1.3542vw, 20px);
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.9;
   word-break: keep-all;
 }
 
@@ -3923,7 +3923,7 @@ body.is-modal-open {
   }
 
   .case-study--kiehls .kiehls-contribution > p {
-    margin: 8px 0 0;
+    margin: 0 0 8px;
     font-size: clamp(15px, 1.25vw, 24px);
     line-height: 1.5;
   }
@@ -4073,7 +4073,7 @@ body.is-modal-open {
   .case-study--kiehls .kiehls-analysis__closing {
     margin: 96px 0;
     font-size: 20px;
-    line-height: 1.5;
+    line-height: 1.7;
   }
 
   /* PROBLEM DEFINITION */
