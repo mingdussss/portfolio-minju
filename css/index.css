@@ -4746,6 +4746,10 @@ body.is-modal-open {
   min-width: 0;
 }
 
+.last-image img{
+  width: 100%;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .detail-card:hover .detail-card__image img {
     transform: scale(1.035);
