@@ -194,7 +194,11 @@ function startGlobe() {
 
   let renderer;
   try {
-    renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer = new THREE.WebGLRenderer({
+      alpha: true,
+      antialias: true
+      preserveDrawingBuffer: true
+    });
   } catch (error) {
     showFallback();
     return;
@@ -569,4 +573,13 @@ if (archiveCarousel) {
   });
 
   updateArchive(0, false);
+}
+
+function downloadSpherePng() {
+  renderer.render(scene, camera);
+
+  const link = document.createElement("a");
+  link.download = "hero-sphere.png";
+  link.href = renderer.domElement.toDataURL("image/png");
+  link.click();
 }
